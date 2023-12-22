@@ -18,13 +18,16 @@ const Button = ({ text }) => {
 			btn.addEventListener("mousemove", handleMouseMove);
 
 			return () => {
+				// Cleanup the event listener when the component unmounts
 				btn.removeEventListener("mousemove", handleMouseMove);
 			};
 		}
 	}, []);
 	return (
-		<div>
-			<button className="button relative inline-flex px-8 py-3 border-2 border-white text-white font-semibold text-xl tracking-widest overflow-hidden before:absolute before:translate-x-[-50%] before:translate-y-[-50%] before:left-1/2 before:top-0 before:w-0 before:h-0 before:rounded-full before:bg-[#f0b428] hover:before:w-[400px] hover:before:h-[400px] hover:text-black before:-z-10 before:ease-in-out">
+		<div className="">
+			<button
+				className="button relative inline-flex justify-center items-center w-56 py-4 border-2 rounded-md border-white text-white font-semibold text-xl tracking-widest overflow-hidden before:absolute before:translate-x-[-50%] before:translate-y-[-50%] before:left-1/2 before:top-0 before:w-0 before:h-0 before:rounded-full before:bg-yellow hover:before:w-[400px] hover:before:h-[400px] hover:text-black before:-z-10 before:ease-in-out"
+			>
 				{text}
 			</button>
 		</div>

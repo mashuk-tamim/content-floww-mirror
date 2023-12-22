@@ -1,14 +1,15 @@
 import Banner from "./Banner";
 import Navbar from "./Navbar";
-
+import Users from "./Users";
 
 const Home = () => {
-    return (
-        <div>
-            <Navbar></Navbar>
+	return (
+		<div>
+			<Navbar></Navbar>
             <Banner></Banner>
-        </div>
-    );
+            <Users></Users>
+		</div>
+	);
 };
 
 export default Home;

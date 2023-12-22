@@ -5,14 +5,14 @@ import Button from "../../component/Button/Button";
 import { useState } from "react";
 
 const navLinks = (
-	<div className="flex flex-col lg:flex-row font-semibold md:text-white text-xs md:text-sm lg:text-base gap-6">
-		<NavLink to="/" className="hover:text-[#f0b428]">
+	<div className="flex flex-col lg:flex-row font-semibold text-white text-xs md:text-sm lg:text-base gap-6">
+		<NavLink to="/" className="hover:text-yellow">
 			Our Craft
 		</NavLink>
-		<NavLink to="/" className="hover:text-[#f0b428]">Results</NavLink>
-		<NavLink to="/" className="hover:text-[#f0b428]">The Process</NavLink>
-		<NavLink to="/" className="hover:text-[#f0b428]">Pricing</NavLink>
-		<NavLink to="/" className="hover:text-[#f0b428]">FAQs</NavLink>
+		<NavLink to="/" className="hover:text-yellow">Results</NavLink>
+		<NavLink to="/" className="hover:text-yellow">The Process</NavLink>
+		<NavLink to="/" className="hover:text-yellow">Pricing</NavLink>
+		<NavLink to="/" className="hover:text-yellow">FAQs</NavLink>
 	</div>
 );
 
@@ -33,12 +33,12 @@ const Navbar = () => {
 					className="flex md:hidden w-8"
 				/>
 			</div>
-			<div className="navbar-center hidden lg:flex border-2 border-gray-500 rounded-2xl py-3 px-10">
+			<div className="navbar-center hidden lg:flex border-2 border-white rounded-2xl py-3 px-10">
 				<ul className="menu menu-horizontal px-1">{navLinks}</ul>
 			</div>
 			<div className="navbar-end pr-3 relative lg:hidden">
 				<button
-					className="btn"
+					className="text-white"
 					onClick={() => {
 						setMenu(!menu);
 					}}
