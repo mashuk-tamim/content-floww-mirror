@@ -6,13 +6,13 @@ import { useState } from "react";
 
 const navLinks = (
 	<div className="flex flex-col lg:flex-row font-semibold text-white text-xs md:text-sm lg:text-base gap-6">
-		<NavLink to="/" className="hover:text-yellow">
+		<NavLink to="/" className="hover:text-coral">
 			Our Craft
 		</NavLink>
-		<NavLink to="/" className="hover:text-yellow">Results</NavLink>
-		<NavLink to="/" className="hover:text-yellow">The Process</NavLink>
-		<NavLink to="/" className="hover:text-yellow">Pricing</NavLink>
-		<NavLink to="/" className="hover:text-yellow">FAQs</NavLink>
+		<NavLink to="/" className="hover:text-coral">Results</NavLink>
+		<NavLink to="/" className="hover:text-coral">The Process</NavLink>
+		<NavLink to="/" className="hover:text-coral">Pricing</NavLink>
+		<NavLink to="/" className="hover:text-coral">FAQs</NavLink>
 	</div>
 );
 
