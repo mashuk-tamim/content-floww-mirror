@@ -9,7 +9,7 @@ const Banner = () => {
 	}, []);
     return (
 		<div className="font-poppins  bg-banner-pattern bg-cover bg-center">
-			<div className="bg-radial-gradient relative space-y-4 md:space-y-6 lg:space-y-8 py-32">
+			<div className="bg-radial-gradient relative space-y-4 md:space-y-6 lg:space-y-8 py-32 ">
 				<div
 					className="text-center text-white text-4xl md:text-6xl lg:text-8xl font-extrabold"
 					data-aos="zoom-in"

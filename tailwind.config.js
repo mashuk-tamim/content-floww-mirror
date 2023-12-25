@@ -23,13 +23,22 @@ export default {
 				"url('https://assets-global.website-files.com/64fad25f8884cb2d680a1052/651106a1852e9bf68a7cb776_hero-bg-blocks.svg')",
 			"radial-gradient":
 				"radial-gradient(circle, rgba(24, 0, 255, .07), rgba(24, 0, 255, .07) 38%, #000)",
-			// "border-gradient":
+			"bnw-gradient": "linear-gradient(to bottom, #000000 , #212121)",
 		},
 		extend: {
 			fontFamily: {
 				poppins: "Poppins, sans-serif",
 				dm: "DM Sans, sans-serif",
 				arimo: "Arimo, sans-serif",
+			},
+			animation: {
+				marquee: "marquee 25s linear infinite",
+			},
+			keyframes: {
+				marquee: {
+					"0%": { transform: "translateX(0%)" },
+					"100%": { transform: "translateX(-100%)" },
+				},
 			},
 		},
 	},
