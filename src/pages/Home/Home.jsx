@@ -1,6 +1,6 @@
 import Banner from "./Banner";
 import Calender from "./Calender";
-import ClientResults from "./ClientResults";
+// import ClientResults from "./ClientResults";
 import FAQ from "./FAQ";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
@@ -22,7 +22,7 @@ const Home = () => {
             <OurImpact></OurImpact>
             <Videos></Videos>
             <Testimonial></Testimonial>
-            <ClientResults></ClientResults>
+            {/* <ClientResults></ClientResults> */}
             <Steps></Steps>
             <Workflow></Workflow>
             <WhyChooseUs></WhyChooseUs>

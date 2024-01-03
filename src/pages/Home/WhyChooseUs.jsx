@@ -1,6 +1,6 @@
 const WhyChooseUs = () => {
 	return (
-		<div className="font-poppins bg-black py-20">
+		<section className="font-poppins bg-black py-20">
 			<div className="flex flex-col items-center relative md:left-20">
 				<div className="flex gap-3 md:gap-5 absolute">
 					{/* star no-fill */}
@@ -103,7 +103,7 @@ const WhyChooseUs = () => {
 					</p>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 };
 

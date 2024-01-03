@@ -2,7 +2,7 @@
 
 const Footer = () => {
     return (
-		<div className="text-white font-poppins w-11/12 mx-auto space-y-10 py-28">
+		<section className="text-white font-poppins w-11/12 mx-auto space-y-10 py-28">
 			<div className="flex flex-col lg:flex-row justify-between gap-10">
 				<div className="flex flex-col md:flex-row text-center md:justify-between lg:gap-5">
 					<div>
@@ -52,10 +52,16 @@ const Footer = () => {
 			</div>
 			<div className="flex flex-col lg:flex-row md:items-center items-center lg:justify-between gap-5 md:text-lg">
 				<div className="flex flex-col md:flex-row">
-					<a href="" className="border-b-2 md:border-r-2 py-4 md:px-4">
+					<a
+						href=""
+						className="border-b-2 md:border-b-0 border-r-0 md:border-r-2 py-4 md:px-4"
+					>
 						Privacy Policy
 					</a>
-					<a href="" className="border-b-2 md:border-r-2 py-4 md:px-4">
+					<a
+						href=""
+						className="border-b-2 md:border-b-0 border-r-0 md:border-r-2 py-4 md:px-4"
+					>
 						Refund Policy
 					</a>
 					<a href="" className="py-4 md:px-4">
@@ -80,7 +86,7 @@ const Footer = () => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 };
 

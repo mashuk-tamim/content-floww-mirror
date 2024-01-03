@@ -2,7 +2,7 @@
 
 const Subscribe = () => {
     return (
-		<div className="bg-clientBg font-poppins">
+		<section className="bg-clientBg font-poppins">
 			<div className="flex flex-col items-center py-28 space-y-5 lg:space-y-8">
 				<div className="flex gap-3 md:gap-5 lg:right-44 relative lg:left-20">
 					{/* star */}
@@ -240,7 +240,7 @@ const Subscribe = () => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 };
 

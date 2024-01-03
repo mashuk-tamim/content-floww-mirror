@@ -1,7 +1,7 @@
 
 const Workflow = () => {
     return (
-		<div className="bg-clientBg flex flex-col gap-28 md:gap-0 md:flex-row font-poppins py-28 md:py-40">
+		<section className="bg-clientBg flex flex-col gap-28 md:gap-0 md:flex-row font-poppins py-28 md:py-40">
 			<div className="w-11/12 mx-auto md:w-1/2 md:py-24 lg:py-16">
 				<div className="w-4/5 mx-auto text-center">
 					<h2 className="text-2xl md:text-4xl lg:text-6xl font-semibold text-black lg:left-20">
@@ -28,7 +28,7 @@ const Workflow = () => {
 					</p>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 };
 

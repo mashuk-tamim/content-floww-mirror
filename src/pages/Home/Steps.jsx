@@ -1,6 +1,6 @@
 const Steps = () => {
 	return (
-		<div className="font-poppins w-11/12 mx-auto my-28">
+		<section className="font-poppins w-11/12 mx-auto my-28">
 			<div className="flex flex-col items-center relative">
 				<div className="flex gap-3 md:gap-5 absolute md:right-44">
 					{/* star */}
@@ -114,7 +114,7 @@ const Steps = () => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 };
 

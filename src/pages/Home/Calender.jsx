@@ -3,7 +3,7 @@ import Button from "../../component/Button/Button";
 
 const Calender = () => {
     return (
-		<div className="font-poppins text-white text-center w-11/12 mx-auto">
+		<section className="font-poppins text-white text-center w-11/12 mx-auto">
 			<h1 className="text-2xl md:text-5xl lg:text-6xl font-semibold pb-10 md:pb-16">
 				Enough of generic videos edited for the sake of editing
 			</h1>
@@ -30,7 +30,7 @@ const Calender = () => {
 				alt=""
 				className="relative w-6 md:w-10 md:left-96 left-40 lg:left-[700px] -top-12 md:-top-20 lg:-top-20"
 			/>
-		</div>
+		</section>
 	);
 };
 

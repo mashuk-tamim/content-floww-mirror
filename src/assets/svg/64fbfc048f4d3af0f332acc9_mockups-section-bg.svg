@@ -1,0 +1,44 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_219_1982)">
+<rect width="1920" height="1080" fill="#01000D"/>
+<g clip-path="url(#clip1_219_1982)">
+<line x1="80.5" y1="2.18557e-08" x2="80.5" y2="1080" stroke="#0C0C0C"/>
+<line x1="240.5" y1="2.18557e-08" x2="240.5" y2="1080" stroke="#0C0C0C"/>
+<line x1="400.5" y1="2.18557e-08" x2="400.5" y2="1080" stroke="#0C0C0C"/>
+<line x1="560.5" y1="2.18557e-08" x2="560.5" y2="1080" stroke="#0C0C0C"/>
+<line x1="720.5" y1="2.18557e-08" x2="720.5" y2="1080" stroke="#0C0C0C"/>
+<line x1="880.5" y1="2.18557e-08" x2="880.5" y2="1080" stroke="#0C0C0C"/>
+<line x1="1040.5" y1="2.18557e-08" x2="1040.5" y2="1080" stroke="#0C0C0C"/>
+<line x1="1200.5" y1="2.18557e-08" x2="1200.5" y2="1080" stroke="#0C0C0C"/>
+<line x1="1360.5" y1="2.18557e-08" x2="1360.5" y2="1080" stroke="#0C0C0C"/>
+<line x1="1520.5" y1="2.18557e-08" x2="1520.5" y2="1080" stroke="#0C0C0C"/>
+<line x1="1680.5" y1="2.18557e-08" x2="1680.5" y2="1080" stroke="#0C0C0C"/>
+<line x1="1840.5" y1="2.18557e-08" x2="1840.5" y2="1080" stroke="#0C0C0C"/>
+<line x1="-80" y1="139.5" x2="2000" y2="139.5" stroke="#0C0C0C"/>
+<line x1="-80" y1="299.5" x2="2000" y2="299.5" stroke="#0C0C0C"/>
+<line x1="-80" y1="459.5" x2="2000" y2="459.5" stroke="#0C0C0C"/>
+<line x1="-80" y1="619.5" x2="2000" y2="619.5" stroke="#0C0C0C"/>
+<line x1="-80" y1="779.5" x2="2000" y2="779.5" stroke="#0C0C0C"/>
+<line x1="-80" y1="939.5" x2="2000" y2="939.5" stroke="#0C0C0C"/>
+<rect x="240" y="140" width="160" height="160" fill="#0C0C0C"/>
+<rect x="560" y="460" width="160" height="160" fill="#0C0C0C"/>
+<rect x="240" y="780" width="160" height="160" fill="#0C0C0C"/>
+<rect x="720" y="300" width="160" height="160" fill="#0C0C0C"/>
+<rect x="880" y="780" width="160" height="160" fill="#0C0C0C"/>
+<rect x="1200" y="140" width="160" height="160" fill="#0C0C0C"/>
+<rect x="1520" y="460" width="160" height="160" fill="#0C0C0C"/>
+<rect x="1200" y="780" width="160" height="160" fill="#0C0C0C"/>
+<rect x="1680" y="300" width="160" height="160" fill="#0C0C0C"/>
+<rect x="1840" y="780" width="160" height="160" fill="#0C0C0C"/>
+</g>
+<rect x="-79.5" y="0.5" width="2079" height="1079" stroke="#0C0C0C"/>
+</g>
+<defs>
+<clipPath id="clip0_219_1982">
+<rect width="1920" height="1080" fill="white"/>
+</clipPath>
+<clipPath id="clip1_219_1982">
+<rect x="-80" width="2080" height="1080" fill="white"/>
+</clipPath>
+</defs>
+</svg>
