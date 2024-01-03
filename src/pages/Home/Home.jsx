@@ -1,8 +1,9 @@
 import Banner from "./Banner";
 import Calender from "./Calender";
-// import ClientResults from "./ClientResults";
+import ClientResults from "./ClientResults/ClientResults";
 import FAQ from "./FAQ";
 import Footer from "./Footer";
+import MarqueeSection from "./Marquee";
 import Navbar from "./Navbar";
 import OurImpact from "./OurImpact";
 import Steps from "./Steps";
@@ -22,12 +23,13 @@ const Home = () => {
             <OurImpact></OurImpact>
             <Videos></Videos>
             <Testimonial></Testimonial>
-            {/* <ClientResults></ClientResults> */}
+            <ClientResults></ClientResults>
             <Steps></Steps>
             <Workflow></Workflow>
             <WhyChooseUs></WhyChooseUs>
             <Subscribe></Subscribe>
             <FAQ></FAQ>
+            <MarqueeSection></MarqueeSection>
             <Calender></Calender>
             <Footer></Footer>
 		</div>

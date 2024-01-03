@@ -34,7 +34,7 @@ const Banner = () => {
 					alt=""
 					className="relative md:w-20 lg:w-36 md:-top-32 lg:-top-56 md:left-[650px] lg:left-[1200px]"
 				/>
-				<div className="flex flex-col md:flex-row gap-5 justify-center items-center relative -top-44">
+				<div className="flex flex-col md:flex-row gap-5 justify-center items-center relative md:-top-24 lg:-top-44">
 					<Button text="View Pricing"></Button>
 					<button className="button relative inline-flex justify-center items-center w-48 py-3.5 border-2 rounded-md bg-white border-white text-black font-semibold text-xl overflow-hidden before:absolute before:translate-x-[-50%] before:translate-y-[-50%] before:left-1/2 before:top-0 before:w-0 before:h-0 before:rounded-full before:bg-yellow hover:before:w-[400px] hover:before:h-[400px] hover:text-black before:-z-10 before:ease-in-out">
 						Book a Call

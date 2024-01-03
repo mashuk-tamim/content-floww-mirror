@@ -1,0 +1,7 @@
+.cap{
+    display: none;
+}
+
+.wrap:hover .cap{
+    display: block;
+}
