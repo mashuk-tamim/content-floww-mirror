@@ -1,23 +1,25 @@
-import { motion, useMotionValue } from "framer-motion";
+import { motion, useMotionValue, useSpring } from "framer-motion";
 // import arrow from "../../../assets/svg/hero-arrow.svg"
 import julian from "../../../assets/images/julian_dorey.jpg";
 import parmita from "../../../assets/images/cheerful-muslim-woman-compressed.jpg";
 import "./ClientResult.css";
 
 const ClientResults = () => {
-	// const cursorX = useMotionValue(0);
-	// const cursorY = useMotionValue(0);
-	// const controls = useAnimation();
 
-	// const handleMouseMove = (event) => {
-	// 	cursorX.set(event.clientX);
-	// 	cursorY.set(event.clientY);
-	// };
+    const mouse = {
+        x: useMotionValue(0),
+        y: useMotionValue(0),
+    };
 
-	const mouse = {
-		x: useMotionValue(0),
-		y: useMotionValue(0),
-	};
+    const smoothOptions = {
+        damping: 40,
+        stiffness: 200,
+        mass: 5.5
+    }
+    const smoothMouse = {
+        x: useSpring(mouse.x, smoothOptions),
+        y: useSpring(mouse.y, smoothOptions)
+    }
 
 	const handleMouseMove1 = (e) => {
 		const { clientX, clientY } = e;
@@ -68,7 +70,7 @@ const ClientResults = () => {
 					</a>
 					<motion.div
 						className="bg-white p-2 pb-0 border rounded-xl border-black cap absolute left-1/2 h-[340px]"
-						style={{ left: mouse.x, top: mouse.y }}
+						style={{ left: smoothMouse.x, top: smoothMouse.y }}
 					>
 						<div>
 							<img
@@ -102,7 +104,7 @@ const ClientResults = () => {
 					</a>
 					<motion.div
 						className="bg-white p-2 pb-0 border rounded-xl border-black cap absolute left-1/2 h-[330px] "
-						style={{ left: mouse.x, top: mouse.y }}
+						style={{ left: smoothMouse.x, top: smoothMouse.y }}
 					>
 						<div>
 							<img
