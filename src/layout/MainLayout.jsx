@@ -1,25 +1,22 @@
 import { Outlet } from "react-router-dom";
-import LocomotiveScroll from "locomotive-scroll";
-import '../css/locomotive-scroll.css'
-import { useEffect, useRef } from "react";
+import Lenis from "@studio-freight/lenis";
+import { useEffect } from "react";
+
 
 
 const MainLayout = () => {
-    const scrollRef = useRef(null);
 
-    
     useEffect(() => {
-        const scroll = new LocomotiveScroll({
-			el: scrollRef.current,
-            smooth: true,
-            multiplier: 0.3,
-        });
-        return () => {
-            scroll.destroy();
-        }
-    },[])
+        const lenis = new Lenis();
+		function raf(time) {
+			lenis.raf(time);
+			requestAnimationFrame(raf);
+		}
+		requestAnimationFrame(raf);
+    }, [])
+
     return (
-        <div ref={scrollRef} className="scroll-container">
+        <div className="overflow-hidden">
             <Outlet></Outlet>
         </div>
     );

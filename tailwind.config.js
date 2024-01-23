@@ -3,14 +3,14 @@
 export default {
 	content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
 	theme: {
-		backgroundImage: {
-			"banner-pattern":
-				"url('https://assets-global.website-files.com/64fad25f8884cb2d680a1052/651106a1852e9bf68a7cb776_hero-bg-blocks.svg')",
-			"radial-gradient":
-				"radial-gradient(circle, rgba(24, 0, 255, .07), rgba(24, 0, 255, .07) 38%, #000)",
-			"bnw-gradient": "linear-gradient(to bottom, #000000 , #212121)",
-		},
 		extend: {
+			backgroundImage: {
+				"banner-pattern":
+					"url('https://assets-global.website-files.com/64fad25f8884cb2d680a1052/651106a1852e9bf68a7cb776_hero-bg-blocks.svg')",
+				"radial-gradient":
+					"radial-gradient(circle, rgba(24, 0, 255, .07), rgba(24, 0, 255, .07) 38%, #000)",
+				"bnw-gradient": "linear-gradient(to bottom, #000000 , #212121)",
+			},
 			fontFamily: {
 				poppins: "Poppins, sans-serif",
 				dm: "DM Sans, sans-serif",

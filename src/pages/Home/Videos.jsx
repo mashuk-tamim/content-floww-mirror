@@ -9,7 +9,7 @@ import video4 from "../../assets/videos/BEFORE_You_Celebrate_CHRISTMAS.mp4";
 // import video1 from "../../assets/videos/media_files";
 const Videos = () => {
 	return (
-		<section className="w-11/12 mx-auto my-28 py-28 font-poppins">
+		<section className="w-11/12 mx-auto my-28 py-28 font-poppins" id="videos">
 			<div className="w-full mx-auto relative">
 				<img
 					src={starLine}

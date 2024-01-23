@@ -2,6 +2,8 @@ import { motion, useMotionValue, useSpring } from "framer-motion";
 // import arrow from "../../../assets/svg/hero-arrow.svg"
 import julian from "../../../assets/images/julian_dorey.jpg";
 import parmita from "../../../assets/images/cheerful-muslim-woman-compressed.jpg";
+import arrow from "../../../assets/svg/64fb1bf7246f0314b3bb34b4_arrow projects.svg"
+import linkArrow from "../../../assets/svg/link-arrow.svg"
 import "./ClientResult.css";
 
 const ClientResults = () => {
@@ -46,9 +48,10 @@ const ClientResults = () => {
 			</h2>
 			<h1 className="text-yellow font-bold text-6xl lg:text-8xl pt-5 pb-10">
 				Client Results
-			</h1>
+            </h1>
+            {/* arrow */}
 			<img
-				src="https://assets-global.website-files.com/64fad25f8884cb2d680a1052/64fb1bf7246f0314b3bb34b4_arrow%20projects.svg"
+				src={arrow}
 				alt=""
 				className="absolute top-14 md:top-12 lg:top-10 left-64 md:left-[270px] lg:left-1/3 w-32 md:w-36 lg:w-44"
 			/>
@@ -60,16 +63,17 @@ const ClientResults = () => {
 				>
 					<p className="text-2xl md:text-3xl lg:text-4xl text-black md:font-medium lg:font-semibold w-full py-6 lg:py-10">
 						Parmita Katkar
-					</p>
+                    </p>
+                    {/* link arrow */}
 					<a href="">
 						<img
-							src="https://assets-global.website-files.com/64fad25f8884cb2d680a1052/64fb18b8a8916b03b1eb3027_projects-arrow.svg"
+							src={linkArrow}
 							alt=""
 							className="w-8"
 						/>
 					</a>
 					<motion.div
-						className="bg-white p-2 pb-0 border rounded-xl border-black cap absolute left-1/2 h-[340px]"
+						className="bg-white p-2 pb-0 border rounded-xl border-black cap absolute left-1/2 h-[340px] z-10"
 						style={{ left: smoothMouse.x, top: smoothMouse.y }}
 					>
 						<div>
@@ -94,16 +98,16 @@ const ClientResults = () => {
 					<p className="text-2xl md:text-3xl lg:text-4xl text-black md:font-medium lg:font-semibold w-full py-6 lg:py-10">
 						Julian Dorey
 					</p>
-
+{/* link arrow */}
 					<a href="">
 						<img
-							src="https://assets-global.website-files.com/64fad25f8884cb2d680a1052/64fb18b8a8916b03b1eb3027_projects-arrow.svg"
+							src={linkArrow}
 							alt=""
 							className="w-8"
 						/>
 					</a>
 					<motion.div
-						className="bg-white p-2 pb-0 border rounded-xl border-black cap absolute left-1/2 h-[330px] "
+						className="bg-white p-2 pb-0 border rounded-xl border-black cap absolute left-1/2 h-[330px] z-10"
 						style={{ left: smoothMouse.x, top: smoothMouse.y }}
 					>
 						<div>

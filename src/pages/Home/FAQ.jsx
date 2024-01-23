@@ -8,7 +8,7 @@ const FAQ = () => {
 		setSelectedAccordion(accordion);
 	};
 	return (
-		<section className="w-11/12 mx-auto space-y-5 text-white py-20 font-poppins">
+		<section className="w-11/12 mx-auto space-y-5 text-white py-20 font-poppins" id="faq">
 			<h1 className="text-3xl md:text-5xl lg:text-7xl text-yellow font-bold text-center">
 				FAQ&apos;s
 			</h1>

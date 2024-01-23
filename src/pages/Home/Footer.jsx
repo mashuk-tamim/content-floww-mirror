@@ -1,4 +1,9 @@
-
+import logoFull from "../../assets/images/64fadbb094b748a8ca80754f_ContentFloww Logo.png"
+import instagram from "../../assets/svg/instagram.svg"
+import twitter from "../../assets/svg/twitter.svg"
+import linkedin from "../../assets/svg/linkedin.svg"
+import hello from "../../assets/svg/hello.svg"
+import redHeart from "../../assets/svg/red_heart.svg"
 
 const Footer = () => {
     return (
@@ -7,7 +12,7 @@ const Footer = () => {
 				<div className="flex flex-col md:flex-row text-center md:justify-between lg:gap-5">
 					<div>
 						<img
-							src="https://assets-global.website-files.com/64fad25f8884cb2d680a1052/64fadbb094b748a8ca80754f_ContentFloww%20Logo.png"
+							src={logoFull}
 							alt="full logo"
 							className="md:flex mx-auto"
 						/>
@@ -22,17 +27,17 @@ const Footer = () => {
 				<div className="flex md:justify-between flex-col md:flex-row lg:flex-col gap-5">
 					<div className="flex gap-4 justify-center lg:justify-end">
 						<img
-							src="https://assets-global.website-files.com/64fad25f8884cb2d680a1052/64fd4e486df00192e507a469_svgexport-17%20(5)%201.svg"
+							src={instagram}
 							alt=""
 							className="w-8"
 						/>
 						<img
-							src="https://assets-global.website-files.com/64fad25f8884cb2d680a1052/64fd4e62b5e959690e1272bc_twitter_5968958.svg"
+							src={twitter}
 							alt=""
 							className="w-8"
 						/>
 						<img
-							src="https://assets-global.website-files.com/64fad25f8884cb2d680a1052/64fd4ddff9318a593c332159_linkedin_3536569.svg"
+							src={linkedin}
 							alt=""
 							className="w-8"
 						/>
@@ -40,7 +45,7 @@ const Footer = () => {
 					<div className="flex gap-2 md:text-lg justify-center">
 						<p>Say</p>
 						<img
-							src="https://assets-global.website-files.com/64fad25f8884cb2d680a1052/64fd4ee06e1ec3678307b807_hello.svg"
+							src={hello}
 							alt=""
 						/>
 						<p>at</p>
@@ -72,7 +77,7 @@ const Footer = () => {
 					<div className="flex">
 						<p>Designed with</p>
 						<img
-							src="https://assets-global.website-files.com/64fad25f8884cb2d680a1052/64fd511adb6ee793b9b76f78_red%20heart.svg"
+							src={redHeart}
 							alt=""
 						/>
 						by

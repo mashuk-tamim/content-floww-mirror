@@ -1,10 +1,32 @@
-
+import { motion, useAnimation, useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 const OurImpact = () => {
+	const controls = useAnimation();
+	const ref = useRef(null);
+    const isInView = useInView(ref, {
+        margin: "100px"
+	});
+	useEffect(() => {
+		if (isInView) {
+			controls.start("visible");
+		}
+	}, [controls, isInView]);
+
 	return (
 		<section>
-			<div>
-				<div className="rounded-lg bg-gradient-to-b from-goldenrod via-offWhite to-coral p-1 border-4 w-11/12 mx-auto">
+			<motion.div
+				className="rounded-lg bg-gradient-to-br from-goldenrod via-offWhite to-coral p-1  w-11/12 mx-auto"
+				ref={ref}
+				animate={controls}
+				initial="hidden"
+				transition={{ duration: 1, delay: 0.1 }}
+				variants={{
+					visible: { rotateX: 0 },
+					hidden: { rotateX: 70 },
+				}}
+			>
+				<div className="bg-black p-2 rounded-[6px]">
 					<div className="rounded-[calc(1.5rem-1px)] py-10 space-y-10 md:space-y-16 lg:space-y-20 font-poppins">
 						<h1 className="text-yellow font-semibold text-xl md:text-3xl lg:text-5xl text-center">
 							Unveiling Our Impact
@@ -26,7 +48,7 @@ const OurImpact = () => {
 						</p>
 					</div>
 				</div>
-			</div>
+			</motion.div>
 		</section>
 	);
 };

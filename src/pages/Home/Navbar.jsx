@@ -1,29 +1,65 @@
-import { NavLink } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import "./Navbar.css";
 import Button from "../../component/Button/Button";
 import { useEffect, useState } from "react";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
-import logoFull from '../../assets/images/64fadbb094b748a8ca80754f_ContentFloww Logo.png'
-import logoShort from '../../assets/images/6515185a35220003dbc671fd_fontentfloww C logo.png'
+import logoFull from "../../assets/images/64fadbb094b748a8ca80754f_ContentFloww Logo.png";
+import logoShort from "../../assets/images/6515185a35220003dbc671fd_fontentfloww C logo.png";
+import { Link } from "react-scroll";
+
 
 const navLinks = (
 	<div className="flex flex-col lg:flex-row font-semibold text-white text-xs md:text-sm lg:text-base gap-6">
-		<NavLink to="/" className="hover:text-coral">
+		<Link
+			to="videos"
+			spy={true}
+			smooth={true}
+			offset={-50}
+			duration={500}
+			className="hover:text-coral"
+		>
 			Our Craft
-		</NavLink>
-		<NavLink to="/" className="hover:text-coral">
+		</Link>
+		<Link
+			to="testimonial"
+			spy={true}
+			smooth={true}
+			offset={-150}
+			duration={500}
+			className="hover:text-coral"
+		>
 			Results
-		</NavLink>
-		<NavLink to="/" className="hover:text-coral">
-			The Process
-		</NavLink>
-		<NavLink to="/" className="hover:text-coral">
+		</Link>
+		<Link
+			to="workflow"
+			spy={true}
+			smooth={true}
+			offset={-50}
+			duration={500}
+			className="hover:text-coral"
+		>
+			Workflow
+		</Link>
+		<Link
+			to="subscribe"
+			spy={true}
+			smooth={true}
+			offset={0}
+			duration={500}
+			className="hover:text-coral"
+		>
 			Pricing
-		</NavLink>
-		<NavLink to="/" className="hover:text-coral">
+		</Link>
+		<Link
+			to="faq"
+			spy={true}
+			smooth={true}
+			offset={0}
+			duration={500}
+			className="hover:text-coral"
+		>
 			FAQs
-		</NavLink>
+		</Link>
 	</div>
 );
 
@@ -51,16 +87,15 @@ const Navbar = () => {
 		// }
 		console.log(latest);
 		if (latest > 800) {
-            setNavTwo(true);
+			setNavTwo(true);
 		} else {
-            setNavTwo(false);
+			setNavTwo(false);
 		}
-    });
-    
+	});
 
-    useEffect(() => {
-        console.log(navTwo);
-    },[navTwo])
+	useEffect(() => {
+		console.log(navTwo);
+	}, [navTwo]);
 
 	return (
 		<motion.nav
@@ -83,7 +118,7 @@ const Navbar = () => {
 						{navTwo || (
 							<div>
 								<img
-                                    src={logoShort}
+									src={logoShort}
 									alt="full logo"
 									className="flex md:hidden w-8"
 								/>
@@ -93,8 +128,8 @@ const Navbar = () => {
 				</div>
 			)}
 			{navTwo ? (
-				<div className="w-full flex justify-center">
-					<div className="navbar-center hidden lg:flex border-2 border-[#464646] rounded-2xl py-3 px-10 bg-black h-[70px] gap-3 justify-center">
+				<div className="w-full flex justify-center ">
+					<div className="navbar-center hidden lg:flex border-2 border-[#464646] rounded-2xl py-3 px-10 bg-black bg-opacity-15 backdrop-blur-md h-[70px] gap-3 justify-center">
 						<ul className="menu menu-horizontal px-1">
 							{navLinks}
 						</ul>
@@ -102,7 +137,7 @@ const Navbar = () => {
 						<button className="button relative inline-flex justify-center items-center w-44 py-2 border-2 rounded-md border-white text-white font-semibold text-xl overflow-hidden before:absolute before:translate-x-[-50%] before:translate-y-[-50%] before:left-1/2 before:top-0 before:w-0 before:h-0 before:rounded-full before:bg-yellow hover:before:w-[400px] hover:before:h-[400px] hover:text-black before:-z-10 before:ease-in-out">
 							Start Now
 						</button>
-                    </div>
+					</div>
 				</div>
 			) : (
 				<div className="navbar-center hidden lg:flex border-2 border-[#464646] rounded-2xl py-3 px-10 bg-black">
@@ -117,7 +152,7 @@ const Navbar = () => {
 						setMenu(!menu);
 					}}
 				>
-                    <GiHamburgerMenu />
+					<GiHamburgerMenu />
 				</button>
 				<div className="absolute top-16 w-full">
 					{menu && <div className="bg-black p-10">{navLinks}</div>}

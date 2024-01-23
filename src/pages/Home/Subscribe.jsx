@@ -1,19 +1,24 @@
+import crown from "../../assets/svg/crown_orange.svg"
+import starNoFill from "../../assets/svg/64fb2c7ec087160e4c6764f3_Yellow Star no fill.svg"
+import arrow from "../../assets/svg/arrow_orange.svg"
+import pointArrow from "../../assets/svg/pricinf-arrow.svg"
+import call from "../../assets/svg/call1.svg"
 
 
 const Subscribe = () => {
     return (
-		<section className="bg-clientBg font-poppins">
+		<section className="bg-clientBg font-poppins" id="subscribe">
 			<div className="flex flex-col items-center py-28 space-y-5 lg:space-y-8">
 				<div className="flex gap-3 md:gap-5 lg:right-44 relative lg:left-20">
-					{/* star */}
+					{/* star no fill*/}
 					<img
-						src="https://assets-global.website-files.com/64fad25f8884cb2d680a1052/64fb2c7ec087160e4c6764f3_Yellow%20Star.svg"
+						src={starNoFill}
 						alt=""
 						className="w-6 md:w-8 relative md:top-5 lg:top-10 -left-5"
 					/>
 					{/* crown */}
 					<img
-						src="https://assets-global.website-files.com/64fad25f8884cb2d680a1052/6503cce233a7ec85a97d9f31_crown%20orange.svg"
+						src={crown}
 						alt=""
 						className="relative -top-10 lg:-top-14 left-[52px] lg:left-[68px] w-8 lg:w-12"
 					/>
@@ -32,11 +37,7 @@ const Subscribe = () => {
 						tomorrow
 					</h1>
 					{/* line */}
-					<img
-						src="https://assets-global.website-files.com/64fad25f8884cb2d680a1052/64fb577fb635c2af89689267_arrow-orange.svg"
-						alt=""
-						className="w-16 md:w-24 lg:w-36"
-					/>
+					<img src={arrow} alt="" className="w-16 md:w-24 lg:w-36" />
 				</div>
 				<div>
 					<p className="text-black font-medium text-center mx-auto">
@@ -68,31 +69,19 @@ const Subscribe = () => {
 					</div>
 					<div className="font-medium space-y-4 pt-8">
 						<div className="flex gap-2">
-							<img
-								src="https://assets-global.website-files.com/64fad25f8884cb2d680a1052/64fc04b18f4d3af0f338a907_pricinf-arrow.svg"
-								alt=""
-							/>
+							<img src={pointArrow} alt="" />
 							<p>World-class editor</p>
 						</div>
 						<div className="flex gap-2">
-							<img
-								src="https://assets-global.website-files.com/64fad25f8884cb2d680a1052/64fc04b18f4d3af0f338a907_pricinf-arrow.svg"
-								alt=""
-							/>
+							<img src={pointArrow} alt="" />
 							<p>Personalized video branding</p>
 						</div>
 						<div className="flex gap-2">
-							<img
-								src="https://assets-global.website-files.com/64fad25f8884cb2d680a1052/64fc04b18f4d3af0f338a907_pricinf-arrow.svg"
-								alt=""
-							/>
+							<img src={pointArrow} alt="" />
 							<p>Pause or cancel anytime</p>
 						</div>
 						<div className="flex gap-2">
-							<img
-								src="https://assets-global.website-files.com/64fad25f8884cb2d680a1052/64fc04b18f4d3af0f338a907_pricinf-arrow.svg"
-								alt=""
-							/>
+							<img src={pointArrow} alt="" />
 							<p>24/7 Chat support</p>
 						</div>
 					</div>
@@ -118,31 +107,19 @@ const Subscribe = () => {
 					</div>
 					<div className="font-medium space-y-4 pt-8">
 						<div className="flex gap-2">
-							<img
-								src="https://assets-global.website-files.com/64fad25f8884cb2d680a1052/64fc04b18f4d3af0f338a907_pricinf-arrow.svg"
-								alt=""
-							/>
+							<img src={pointArrow} alt="" />
 							<p>World-class editor</p>
 						</div>
 						<div className="flex gap-2">
-							<img
-								src="https://assets-global.website-files.com/64fad25f8884cb2d680a1052/64fc04b18f4d3af0f338a907_pricinf-arrow.svg"
-								alt=""
-							/>
+							<img src={pointArrow} alt="" />
 							<p>Personalized video branding</p>
 						</div>
 						<div className="flex gap-2">
-							<img
-								src="https://assets-global.website-files.com/64fad25f8884cb2d680a1052/64fc04b18f4d3af0f338a907_pricinf-arrow.svg"
-								alt=""
-							/>
+							<img src={pointArrow} alt="" />
 							<p>Pause or cancel anytime</p>
 						</div>
 						<div className="flex gap-2">
-							<img
-								src="https://assets-global.website-files.com/64fad25f8884cb2d680a1052/64fc04b18f4d3af0f338a907_pricinf-arrow.svg"
-								alt=""
-							/>
+							<img src={pointArrow} alt="" />
 							<p>24/7 Chat support</p>
 						</div>
 					</div>
@@ -168,31 +145,19 @@ const Subscribe = () => {
 					</div>
 					<div className="font-medium space-y-4 pt-8">
 						<div className="flex gap-2">
-							<img
-								src="https://assets-global.website-files.com/64fad25f8884cb2d680a1052/64fc04b18f4d3af0f338a907_pricinf-arrow.svg"
-								alt=""
-							/>
+							<img src={pointArrow} alt="" />
 							<p>World-class editor</p>
 						</div>
 						<div className="flex gap-2">
-							<img
-								src="https://assets-global.website-files.com/64fad25f8884cb2d680a1052/64fc04b18f4d3af0f338a907_pricinf-arrow.svg"
-								alt=""
-							/>
+							<img src={pointArrow} alt="" />
 							<p>Personalized video branding</p>
 						</div>
 						<div className="flex gap-2">
-							<img
-								src="https://assets-global.website-files.com/64fad25f8884cb2d680a1052/64fc04b18f4d3af0f338a907_pricinf-arrow.svg"
-								alt=""
-							/>
+							<img src={pointArrow} alt="" />
 							<p>Pause or cancel anytime</p>
 						</div>
 						<div className="flex gap-2">
-							<img
-								src="https://assets-global.website-files.com/64fad25f8884cb2d680a1052/64fc04b18f4d3af0f338a907_pricinf-arrow.svg"
-								alt=""
-							/>
+							<img src={pointArrow} alt="" />
 							<p>24/7 Chat support</p>
 						</div>
 					</div>
@@ -201,7 +166,7 @@ const Subscribe = () => {
 			<div className="grid grid-cols-2 lg:grid-cols-3 gap-5 text-black w-11/12 mx-auto pt-14 md:pt-20 pb-20 md:pb-28">
 				<div className="border border-black rounded-2xl px-3 py-5 md:p-5 lg:px-12 lg:py-8 space-y-5 lg:col-span-2">
 					<img
-						src="https://assets-global.website-files.com/64fad25f8884cb2d680a1052/64fc1373cf0e897a27e9e9be_call%201.svg"
+						src={call}
 						alt=""
 						className="w-20"
 					/>
@@ -221,7 +186,7 @@ const Subscribe = () => {
 				</div>
 				<div className="border border-black rounded-2xl px-3 py-5 md:p-5 lg:px-12 lg:py-8 space-y-5">
 					<img
-						src="https://assets-global.website-files.com/64fad25f8884cb2d680a1052/64fc1373cf0e897a27e9e9be_call%201.svg"
+						src={call}
 						alt=""
 						className="w-20"
 					/>

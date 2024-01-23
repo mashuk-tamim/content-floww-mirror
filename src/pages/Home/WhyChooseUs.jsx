@@ -1,3 +1,12 @@
+import starNoFill from "../../assets/svg/64fb2c7ec087160e4c6764f3_Yellow Star no fill.svg"
+import starFill from "../../assets/svg/64fc1a63ad4bc0f51d3653b9_star filled.svg"
+import videoCamera from "../../assets/gif/video_camera.gif"
+import rocket from "../../assets/gif/rocket.gif"
+import hourGlass from "../../assets/gif/hourglass.gif"
+import teamWork from "../../assets/gif/teamwork.gif"
+import magicWand from "../../assets/gif/magic_wand.gif"
+import certificate from "../../assets/gif/certificate.gif"
+
 const WhyChooseUs = () => {
 	return (
 		<section className="font-poppins bg-black py-20">
@@ -5,7 +14,7 @@ const WhyChooseUs = () => {
 				<div className="flex gap-3 md:gap-5 absolute">
 					{/* star no-fill */}
 					<img
-						src="https://assets-global.website-files.com/64fad25f8884cb2d680a1052/64fb2c7ec087160e4c6764f3_Yellow%20Star.svg"
+						src={starNoFill}
 						alt=""
 						className="absolute -left-5 md:-left-20 lg:-left-20 -top-10 md:top-1 lg:top-10 md:-bottom-5 w-6 md:w-10"
 					/>
@@ -17,7 +26,7 @@ const WhyChooseUs = () => {
 					</h2>
 					{/* star fill */}
 					<img
-						src="https://assets-global.website-files.com/64fad25f8884cb2d680a1052/64fc1a63ad4bc0f51d3653b9_star%20filled.svg"
+						src={starFill}
 						alt=""
 						className="w-6 md:w-12 -top-4 md:-top-2 absolute -right-20 md:-right-16 lg:-right-24"
 					/>
@@ -28,7 +37,7 @@ const WhyChooseUs = () => {
 					</h2>
 					{/* star no-fill bottom */}
 					<img
-						src="https://assets-global.website-files.com/64fad25f8884cb2d680a1052/64fb2c7ec087160e4c6764f3_Yellow%20Star.svg"
+						src={starNoFill}
 						alt=""
 						className="w-6 md:w-8 lg:w-10 absolute right-[90px] md:right-5 lg:right-52 top-5 md:top-14 lg:top-28"
 					/>
@@ -38,7 +47,7 @@ const WhyChooseUs = () => {
 				{/* ???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????? */}
 				<div className="flex flex-col items-center space-y-5 mt-5">
 					<img
-						src="https://assets-global.website-files.com/64fad25f8884cb2d680a1052/64fb53c72a285a671b1cdbef_video%20camera%20(1)%20(1).gif"
+						src={videoCamera}
 						alt=""
 						className="w-16 lg:w-28"
 					/>
@@ -49,7 +58,7 @@ const WhyChooseUs = () => {
 				</div>
 				<div className="flex flex-col items-center space-y-5">
 					<img
-						src="https://assets-global.website-files.com/64fad25f8884cb2d680a1052/64fb52420e80154f5c60fc99_rocket.gif"
+						src={rocket}
 						alt=""
 						className="w-16 lg:w-28"
 					/>
@@ -60,7 +69,7 @@ const WhyChooseUs = () => {
 				</div>
 				<div className="flex flex-col items-center space-y-5">
 					<img
-						src="https://assets-global.website-files.com/64fad25f8884cb2d680a1052/64fb535287cbe288917fd4c4_hourglass.gif"
+						src={hourGlass}
 						alt=""
 						className="w-16 lg:w-28"
 					/>
@@ -71,7 +80,7 @@ const WhyChooseUs = () => {
 				</div>
 				<div className="flex flex-col items-center space-y-5">
 					<img
-						src="https://assets-global.website-files.com/64fad25f8884cb2d680a1052/64fb536dd2321642c7342702_teamwork.gif"
+						src={teamWork}
 						alt=""
 						className="w-16 lg:w-28"
 					/>
@@ -82,7 +91,7 @@ const WhyChooseUs = () => {
 				</div>
 				<div className="flex flex-col items-center space-y-5">
 					<img
-						src="https://assets-global.website-files.com/64fad25f8884cb2d680a1052/64fb526b232682e302a8e228_magic%20wand.gif"
+						src={magicWand}
 						alt=""
 						className="w-16 lg:w-28"
 					/>
@@ -93,7 +102,7 @@ const WhyChooseUs = () => {
 				</div>
 				<div className="flex flex-col items-center space-y-5">
 					<img
-						src="https://assets-global.website-files.com/64fad25f8884cb2d680a1052/64fb538f519da6e91901e297_certificate.gif"
+						src={certificate}
 						alt=""
 						className="w-16 lg:w-28"
 					/>
