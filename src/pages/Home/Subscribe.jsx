@@ -1,12 +1,21 @@
-import crown from "../../assets/svg/crown_orange.svg"
-import starNoFill from "../../assets/svg/64fb2c7ec087160e4c6764f3_Yellow Star no fill.svg"
-import arrow from "../../assets/svg/arrow_orange.svg"
-import pointArrow from "../../assets/svg/pricinf-arrow.svg"
-import call from "../../assets/svg/call1.svg"
+import crown from "../../assets/svg/crown_orange.svg";
+import starNoFill from "../../assets/svg/64fb2c7ec087160e4c6764f3_Yellow Star no fill.svg";
+import arrow from "../../assets/svg/arrow_orange.svg";
+import pointArrow from "../../assets/svg/pricinf-arrow.svg";
+import star from "../../assets/svg/6597f6da265c4ccf70b5e684_star-ta.svg";
 
+import call from "../../assets/svg/call1.svg";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 const Subscribe = () => {
-    return (
+	const cardRef = useRef(null);
+	const isInView = useInView(cardRef, {
+		once: true,
+	});
+	const delay = 0.3;
+
+	return (
 		<section className="bg-clientBg font-poppins" id="subscribe">
 			<div className="flex flex-col items-center py-28 space-y-5 lg:space-y-8">
 				<div className="flex gap-3 md:gap-5 lg:right-44 relative lg:left-20">
@@ -47,129 +56,80 @@ const Subscribe = () => {
 					</p>
 				</div>
 			</div>
-			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-5 md:gap-5 lg:gap-10 w-full md:w-11/12 mx-auto">
-				<div className="text-black bg-[#fde7cc] p-5 w-11/12 md:w-80 lg:w-[400px] rounded-2xl shadow-xl">
-					<div className="">
-						<p className="text-lg font-semibold">Basic</p>
-						<h2 className="text-4xl font-bold py-10">
-							$1999/
-							<span className="text-xl font-semibold relative top-2">
-								month
-							</span>
-						</h2>
-						<p className="font-medium pb-8">20 Videos a month</p>
-						{/* <Button text="Start Now"></Button> */}
-						<div className="pb-10">
-							<button className="button relative inline-flex justify-center border-black items-center w-full py-3 border-2 rounded-md bg-black text-white font-semibold text-xl tracking-widest overflow-hidden before:absolute before:translate-x-[-50%] before:translate-y-[-50%] before:left-1/2 before:top-0 before:w-0 before:h-0 before:rounded-full before:bg-yellow hover:before:w-[400px] hover:before:h-[400px] hover:text-black before:-z-10 before:ease-in-out hover:bg-yellow">
-								Start Now
-							</button>
-						</div>
+			<div ref={cardRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-5 md:gap-5 lg:gap-8 w-full md:w-11/12 mx-auto">
+				{values.map((value) => {
+					return (
+						<motion.div
+							style={{
+								y: isInView ? "0px" : "100px",
+								opacity: isInView ? 1 : 0,
+								transitionDuration: "0.5s",
+								transitionDelay: `${value.id * delay}s`,
+							}}
+							key={value.id}
+						>
+							<div
+								className={`text-black bg-[${value.cardBg}] p-5 w-11/12 md:w-80 lg:w-[380px] lg:h-[710px] rounded-2xl shadow-xl`}
+							>
+								<div className="">
+									<p className="text-lg font-semibold">
+										{value.plan}
+									</p>
+									<h2 className="text-4xl font-bold py-10">
+										${value.price}/
+										<span className="text-xl font-semibold relative">
+											month
+										</span>
+									</h2>
+									<p className="font-medium pb-8">
+										{value.planIncludes}
+									</p>
+									<div className="pb-10">
+										<button
+											className={`button relative inline-flex justify-center border-black items-center w-full py-3 border-2 rounded-md bg-[${value.btnBg}] text-[${value.btnTextColor}] font-semibold text-xl tracking-widest overflow-hidden before:absolute before:translate-x-[-50%] before:translate-y-[-50%] before:left-1/2 before:top-0 before:w-0 before:h-0 before:rounded-full before:bg-yellow hover:before:w-[400px] hover:before:h-[400px] hover:text-black before:-z-10 before:ease-in-out hover:bg-yellow`}
+										>
+											{value.btnText}
+										</button>
+									</div>
 
-						<hr />
-					</div>
-					<div className="font-medium space-y-4 pt-8">
-						<div className="flex gap-2">
-							<img src={pointArrow} alt="" />
-							<p>World-class editor</p>
-						</div>
-						<div className="flex gap-2">
-							<img src={pointArrow} alt="" />
-							<p>Personalized video branding</p>
-						</div>
-						<div className="flex gap-2">
-							<img src={pointArrow} alt="" />
-							<p>Pause or cancel anytime</p>
-						</div>
-						<div className="flex gap-2">
-							<img src={pointArrow} alt="" />
-							<p>24/7 Chat support</p>
-						</div>
-					</div>
-				</div>
-				<div className="text-black bg-[#faca91] p-5 w-11/12 md:w-80 lg:w-[400px] rounded-2xl shadow-xl">
-					<div className="">
-						<p className="text-lg font-semibold">Basic</p>
-						<h2 className="text-4xl font-bold py-10">
-							$1999/
-							<span className="text-xl font-semibold relative top-2">
-								month
-							</span>
-						</h2>
-						<p className="font-medium pb-8">20 Videos a month</p>
-						{/* <Button text="Start Now"></Button> */}
-						<div className="pb-10">
-							<button className="button relative inline-flex justify-center border-black items-center w-full py-3 border-2 rounded-md bg-black text-white font-semibold text-xl tracking-widest overflow-hidden before:absolute before:translate-x-[-50%] before:translate-y-[-50%] before:left-1/2 before:top-0 before:w-0 before:h-0 before:rounded-full before:bg-yellow hover:before:w-[400px] hover:before:h-[400px] hover:text-black before:-z-10 before:ease-in-out hover:bg-yellow">
-								Start Now
-							</button>
-						</div>
-
-						<hr />
-					</div>
-					<div className="font-medium space-y-4 pt-8">
-						<div className="flex gap-2">
-							<img src={pointArrow} alt="" />
-							<p>World-class editor</p>
-						</div>
-						<div className="flex gap-2">
-							<img src={pointArrow} alt="" />
-							<p>Personalized video branding</p>
-						</div>
-						<div className="flex gap-2">
-							<img src={pointArrow} alt="" />
-							<p>Pause or cancel anytime</p>
-						</div>
-						<div className="flex gap-2">
-							<img src={pointArrow} alt="" />
-							<p>24/7 Chat support</p>
-						</div>
-					</div>
-				</div>
-				<div className="text-black bg-[#f7b05b] p-5 w-11/12 md:w-80 lg:w-[400px] rounded-2xl shadow-xl">
-					<div className="">
-						<p className="text-lg font-semibold">Basic</p>
-						<h2 className="text-4xl font-bold py-10">
-							$1999/
-							<span className="text-xl font-semibold relative top-2">
-								month
-							</span>
-						</h2>
-						<p className="font-medium pb-8">20 Videos a month</p>
-						{/* <Button text="Start Now"></Button> */}
-						<div className="pb-10">
-							<button className="button relative inline-flex justify-center border-black items-center w-full py-3 border-2 rounded-md bg-black text-white font-semibold text-xl tracking-widest overflow-hidden before:absolute before:translate-x-[-50%] before:translate-y-[-50%] before:left-1/2 before:top-0 before:w-0 before:h-0 before:rounded-full before:bg-yellow hover:before:w-[400px] hover:before:h-[400px] hover:text-black before:-z-10 before:ease-in-out hover:bg-yellow">
-								Start Now
-							</button>
-						</div>
-
-						<hr />
-					</div>
-					<div className="font-medium space-y-4 pt-8">
-						<div className="flex gap-2">
-							<img src={pointArrow} alt="" />
-							<p>World-class editor</p>
-						</div>
-						<div className="flex gap-2">
-							<img src={pointArrow} alt="" />
-							<p>Personalized video branding</p>
-						</div>
-						<div className="flex gap-2">
-							<img src={pointArrow} alt="" />
-							<p>Pause or cancel anytime</p>
-						</div>
-						<div className="flex gap-2">
-							<img src={pointArrow} alt="" />
-							<p>24/7 Chat support</p>
-						</div>
-					</div>
-				</div>
+									<div className="border-[0.5px] border-black"></div>
+								</div>
+								<div className="font-medium space-y-4 pt-8">
+									{value.planDetails.map((i) => {
+										return (
+											<div key={i} className="flex gap-2">
+												<img src={pointArrow} alt="" />
+												<p
+													className={`${
+														i.isBold === "false"
+															? "font-md"
+															: "font-bold"
+													} `}
+												>
+													{i.text}
+												</p>
+											</div>
+										);
+									})}
+								</div>
+								<div
+									className={`bg-[${value.bestForBg}] border-[1px] border-white text-[#ff7332] mt-5 p-2 rounded-xl flex items-center gap-2`}
+								>
+									<img
+										src={star}
+										alt=""
+										className="w-6 md:w-8"
+									/>
+									<p>{value.bestFor}</p>
+								</div>
+							</div>
+						</motion.div>
+					);
+				})}
 			</div>
 			<div className="grid grid-cols-2 lg:grid-cols-3 gap-5 text-black w-11/12 mx-auto pt-14 md:pt-20 pb-20 md:pb-28">
 				<div className="border border-black rounded-2xl px-3 py-5 md:p-5 lg:px-12 lg:py-8 space-y-5 lg:col-span-2">
-					<img
-						src={call}
-						alt=""
-						className="w-20"
-					/>
+					<img src={call} alt="" className="w-20" />
 					<h2 className="md:text-xl lg:text-4xl font-bold">
 						Book a Call
 					</h2>
@@ -185,11 +145,7 @@ const Subscribe = () => {
 					</div>
 				</div>
 				<div className="border border-black rounded-2xl px-3 py-5 md:p-5 lg:px-12 lg:py-8 space-y-5">
-					<img
-						src={call}
-						alt=""
-						className="w-20"
-					/>
+					<img src={call} alt="" className="w-20" />
 					<h2 className="md:text-xl lg:text-4xl font-bold">
 						Book a Call
 					</h2>
@@ -210,3 +166,107 @@ const Subscribe = () => {
 };
 
 export default Subscribe;
+
+const values = [
+	{
+		id: 1,
+		cardBg: "#fde7cc",
+		plan: "Basic",
+		price: "2499",
+		planIncludes: "20 Short videos",
+		btnText: "Start Now",
+		btnTextColor: "#000000",
+		btnBg: "#000000",
+		isMostTrending: "false",
+		planDetails: [
+			{
+				isBold: "false",
+				text: "World-class editor",
+			},
+			{
+				isBold: "false",
+				text: "Personalized video branding",
+			},
+			{
+				isBold: "false",
+				text: "Pause or cancel anytime",
+			},
+			{
+				isBold: "false",
+				text: "24/7 Chat support",
+			},
+			{
+				isBold: "false",
+				text: "Dedicated social media manager",
+			},
+			{
+				isBold: "false",
+				text: "Unlimited revisions",
+			},
+			{
+				isBold: "false",
+				text: "Monthly growth reports",
+			},
+		],
+		bestFor: "Best for podcasters",
+		bestForBg: "#fef1e0",
+	},
+	{
+		id: 2,
+		cardBg: "#faca91",
+		plan: "Growth",
+		price: "3999",
+		planIncludes: "15 Short videos + 10 animation edits",
+		btnText: "Join Waitlist",
+		btnTextColor: "#000000",
+		btnBg: "#000000",
+		isMostTrending: "true",
+		planDetails: [
+			{
+				isBold: "true",
+				text: "Everything you get in Basic Plus:",
+			},
+			{
+				isBold: "false",
+				text: "Expert animator",
+			},
+			{
+				isBold: "false",
+				text: "Organic lead generation",
+			},
+			{
+				isBold: "false",
+				text: "Automation setup",
+			},
+		],
+		bestFor: "Best for creators/ brands serious about organic growth",
+		bestForBg: "#fcdfbd",
+	},
+	{
+		id: 3,
+		cardBg: "#f7b05b",
+		plan: "Platinum",
+		price: "6999",
+		planIncludes: "Complete organic growth package",
+		btnText: "Book a call",
+		btnTextColor: "#ffffff",
+		btnBg: "#ffffff",
+		isMostTrending: "false",
+		planDetails: [
+			{
+				isBold: "false",
+				text: "Strategy, ideation, scripting, management, lead generation, and monetization",
+			},
+			{
+				isBold: "false",
+				text: "Everything you will ever need to grow and monetize your brand with organic videos",
+			},
+			{
+				isBold: "false",
+				text: "Get an entire growth team for your brand",
+			},
+		],
+		bestFor: "For Outliers",
+		bestForBg: "#fad09d",
+	},
+];

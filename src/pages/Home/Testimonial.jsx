@@ -14,14 +14,17 @@ const Testimonial = () => {
         target: sliderRef1,
         offset: ['0 1', '1 0']
     })
-    const x1 = useTransform(scrollYProgress1, [0, 1], [-400, 0]);
+    const x1 = useTransform(scrollYProgress1, [0, 1], [-300, 0]);
     const { scrollYProgress: scrollYProgress2 } = useScroll({
         target: sliderRef2,
         offset: ['0 1', '1 0']
     })
-    const x2 = useTransform(scrollYProgress2, [0, 1], [0, -400]);
+    const x2 = useTransform(scrollYProgress2, [0, 1], [0, -300]);
 	return (
-		<section className="font-poppins my-32" id="testimonial">
+		<section
+			className="font-poppins my-32 overflow-hidden"
+			id="testimonial"
+		>
 			{/* heading */}
 			<div className="relative flex justify-center mb-20">
 				<h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-gray-dark tracking-wide">
@@ -48,18 +51,22 @@ const Testimonial = () => {
 					alt=""
 					className="absolute top-10 lg:top-24 w-14 left-1/2"
 				/>
-            </div>
-            {/* slider 1 */}
-            <motion.div ref={sliderRef1} style={{
-                x: x1,
-            }} className="flex gap-10">
-				{[1, 2, 3, 4, 5].map((i) => {
+			</div>
+			{/* slider 1 */}
+			<motion.div
+				ref={sliderRef1}
+				style={{
+					x: x1,
+				}}
+				className="flex gap-10"
+			>
+				{[1, 2, 3, 4].map((i) => {
 					return (
 						<div key={i}>
 							<div className="flex gap-3 items-center justify-center my-10">
 								<div className="hidden md:flex bg-[#fafafa] border px-2 pt-2 md:pb-8 lg:pb-14 rounded-2xl md:w-[150px] lg:w-44 md:h-[280px] lg:h-[350px]">
 									<video
-										src={video1}
+										src={"video1"}
 										controls
 										autoPlay
 										muted
@@ -93,20 +100,22 @@ const Testimonial = () => {
 						</div>
 					);
 				})}
-
-				
 			</motion.div>
-            {/* slider 2 */}
-            <motion.div ref={sliderRef2} style={{
-                x:x2
-            }} className="flex gap-10 ">
-				{[1, 2, 3, 4, 5].map((i) => {
+			{/* slider 2 */}
+			<motion.div
+				ref={sliderRef2}
+				style={{
+					x: x2,
+				}}
+				className="flex gap-10 mb-10"
+			>
+				{[1, 2, 3, 4].map((i) => {
 					return (
 						<div key={i}>
 							<div className="flex gap-3 items-center justify-center">
 								<div className="hidden md:flex bg-[#fafafa] border px-2 pt-2 md:pb-8 lg:pb-14 rounded-2xl md:w-[150px] lg:w-44 md:h-[280px] lg:h-[350px]">
 									<video
-										src={video1}
+										src={"video1"}
 										controls
 										autoPlay
 										muted
@@ -140,8 +149,6 @@ const Testimonial = () => {
 						</div>
 					);
 				})}
-
-				
 			</motion.div>
 		</section>
 	);

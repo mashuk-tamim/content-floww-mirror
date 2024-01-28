@@ -2,7 +2,7 @@ import { useState } from "react";
 
 
 const FAQ = () => {
-	const [selectedAccordion, setSelectedAccordion] = useState("accordion-1");
+	const [selectedAccordion, setSelectedAccordion] = useState("accordion1");
 
 	const handleAccordionChange = (accordion) => {
 		setSelectedAccordion(accordion);

@@ -5,6 +5,11 @@ import {
 } from "framer-motion";
 import PropTypes from "prop-types";
 import { useRef } from "react";
+import rawFootage from "../../assets/svg/Send_raw_footage.svg"
+import notion from "../../assets/svg/Notion_Logo.svg"
+import slack from "../../assets/svg/slack _Logo.svg"
+import frameIO from "../../assets/svg/Frameio_Logo .svg"
+import hootsuite from "../../assets/svg/hootsuite_Logo.svg"
 const Workflow = () => {
 
 	return (
@@ -52,7 +57,7 @@ const Card = ({ card }) => {
 					<img
 						src={card.url}
 						alt=""
-						className="w-24 md:w-24 lg:w-20 bg-black"
+						className="w-24 md:w-24 lg:w-24 bg-black"
 					/>
 					<p
 						className="text-white font-medium md:font-semibold text-xl md:text-2xl lg:text-3xl md:tracking-wide"
@@ -68,27 +73,27 @@ const Card = ({ card }) => {
 
 const cards = [
 	{
-		url: "https://i.ibb.co/6P4jqcb/Send-raw-footage.jpg",
+		url: rawFootage,
 		title: "Send your raw footage",
 		id: 1,
 	},
 	{
-		url: "https://i.ibb.co/zhgkZbn/Notion-Logo.jpg",
+		url: notion,
 		title: "We help you with scripting and hooks on notion if required",
 		id: 2,
 	},
 	{
-		url: "https://i.ibb.co/bdT3gcB/slack-Logo.jpg",
+		url: slack,
 		title: "Communicate with the team on slack.",
 		id: 3,
 	},
 	{
-		url: "https://i.ibb.co/YBtsJWZ/Frameio-Logo.jpg",
+		url: frameIO,
 		title: "Give us feedback on Frame.io",
 		id: 4,
 	},
 	{
-		url: "https://i.ibb.co/SRnQZGM/hootsuite-Logo.jpg",
+		url: hootsuite,
 		title: "Pubilsh or let our managers take care of publishing with hootsuite",
 		id: 5,
 	},
