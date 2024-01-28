@@ -8,28 +8,25 @@ import { useRef } from "react";
 const Workflow = () => {
 
 	return (
-        <section
+		<section
 			id="workflow"
-			className="bg-clientBg grid grid-cols-2 md:flex-row gap-28 md:gap-0 lg:gap-0 justify-center font-poppins pt-[20vh] overflow-visible h-[500vh]"
+			className="bg-clientBg flex flex-col md:flex-row gap-28 md:gap-0 lg:gap-0 justify-center font-poppins h-[400vh] relative pt-[20vh]"
 		>
-			<div className="w-11/12 mx-auto md:w-[50%] py-0 md:py-24 lg:py-16 border-red-500 h-[30vh] sticky top-36 bottom-36 mb-[70vh]">
-				<div className="flex flex-col items-center">
-					<h2 className="text-2xl md:text-4xl lg:text-6xl font-semibold text-black lg:left-20">
-						Smooth & easy
-					</h2>
-					<h1 className="text-3xl md:text-5xl lg:text-7xl text-yellow font-bold ">
-						Workflow
-					</h1>
+			<div className="w-11/12 mx-auto md:w-[50%] py-0 md:py-24 lg:py-16 border-red-500 h-[30vh] sticky top-36 mb-[20vh]">
+				<div className="relative">
+					<div className="flex flex-col items-center">
+						<h2 className="text-2xl md:text-4xl lg:text-6xl font-semibold text-black lg:left-20">
+							Smooth & easy
+						</h2>
+						<h1 className="text-3xl md:text-5xl lg:text-7xl text-yellow font-bold ">
+							Workflow
+						</h1>
+					</div>
 				</div>
 			</div>
 			<div className="w-[50%]">
 				{cards.map((card) => {
-					return (
-						<Card
-							card={card}
-							key={card.id}
-						/>
-					);
+					return <Card card={card} key={card.id} />;
 				})}
 			</div>
 		</section>
@@ -48,10 +45,10 @@ const Card = ({ card }) => {
 			ref={cardRef}
 			key={card.id}
 			// style={{ translateX: cardVariant }}
-			className="sticky top-36 h-[100vh]"
+			className="sticky top-36 h-[70vh]"
 		>
-			<motion.div className="h-[380px]" style={{scale}}>
-				<div className="h-full bg-bnw-gradient md:w-80 lg:w-[510px] px-8 md:px-6 lg:px-8 py-20 rounded-2xl space-y-5">
+			<motion.div className="h-[380px] relative" style={{ scale }}>
+				<div className=" h-full bg-bnw-gradient md:w-80 lg:w-[510px] px-8 md:px-6 lg:px-8 py-20 rounded-2xl space-y-5">
 					<img
 						src={card.url}
 						alt=""

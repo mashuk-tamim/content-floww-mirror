@@ -16,7 +16,7 @@ const MainLayout = () => {
     }, [])
 
     return (
-        <div className="overflow-hidden">
+        <div className="">
             <Outlet></Outlet>
         </div>
     );

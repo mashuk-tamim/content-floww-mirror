@@ -1,29 +1,20 @@
-import { motion, useAnimation, useInView } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const OurImpact = () => {
-	const controls = useAnimation();
 	const ref = useRef(null);
     const isInView = useInView(ref, {
-        margin: "100px"
+        once: false
 	});
-	useEffect(() => {
-		if (isInView) {
-			controls.start("visible");
-		}
-	}, [controls, isInView]);
 
 	return (
-		<section>
+		<section className="">
 			<motion.div
 				className="rounded-lg bg-gradient-to-br from-goldenrod via-offWhite to-coral p-1  w-11/12 mx-auto"
 				ref={ref}
-				animate={controls}
-				initial="hidden"
-				transition={{ duration: 1, delay: 0.1 }}
-				variants={{
-					visible: { rotateX: 0 },
-					hidden: { rotateX: 70 },
+				style={{
+					transform: isInView ? "rotateX(0deg)" : "rotateX(90deg)",
+                    transitionDuration: "1s",
 				}}
 			>
 				<div className="bg-black p-2 rounded-[6px]">
