@@ -21,8 +21,8 @@ const Videos = () => {
 	});
 	const y1 = useTransform(scrollYProgress, [0, 1], [0, -200]);
 	const y2 = useTransform(scrollYProgress, [0, 1], [0, -100]);
-	const rotate1 = useTransform(scrollYProgress, [0, 1], [0, 6]);
-	const rotate2 = useTransform(scrollYProgress, [0, 1], [0, -6]);
+	const rotate1 = useTransform(scrollYProgress, [0, 1], [0, 8]);
+	const rotate2 = useTransform(scrollYProgress, [0, 1], [0, -8]);
 	return (
 		<section
 			ref={svgRef}
