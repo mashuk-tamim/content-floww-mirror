@@ -65,7 +65,10 @@ const navLinks = (
 
 const Navbar = () => {
 	const [menu, setMenu] = useState(false);
-	const [navTwo, setNavTwo] = useState(false);
+	const [navTwo, setNavTwo] = useState(() => {
+		// Try to retrieve the value from local storage, defaulting to false if not found
+		return JSON.parse(localStorage.getItem("navTwo")) || false;
+	});
 
 	const { scrollY } = useScroll();
 
@@ -87,9 +90,11 @@ const Navbar = () => {
 		// }
 		console.log(latest);
 		if (latest > 800) {
-			setNavTwo(true);
+            setNavTwo(true);
+            localStorage.setItem("navTwo", JSON.stringify(true));
 		} else {
-			setNavTwo(false);
+            setNavTwo(false);
+             localStorage.setItem("navTwo", JSON.stringify(false));
 		}
 	});
 
