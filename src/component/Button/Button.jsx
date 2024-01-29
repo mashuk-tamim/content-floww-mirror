@@ -15,7 +15,7 @@ const Button = ({ text, btnBg, isBorder, width }) => {
 	return (
 		<div>
 			<button
-				className={`relative inline-flex justify-center items-center w-48 h-16 ${btnBg} border-2 rounded-md border-white hover:border-none font-semibold text-xl overflow-hidden ${
+				className={`relative inline-flex justify-center items-center w-48 h-14 ${btnBg} border-2 rounded-md border-white hover:border-none font-semibold text-xl overflow-hidden ${
 					btnBg === "bg-[#000000]"
 						? isHovered
 							? "text-black"

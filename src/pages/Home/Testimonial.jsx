@@ -4,12 +4,16 @@ import like from "../../assets/svg/64fb14209552ef390591774b_like.svg";
 import quote from "../../assets/svg/64fb0d9a3dc59b592ac6cf08_quote.svg";
 import thumbs_fill from "../../assets/svg/64fb142c51d65e51f3884619_thumb-up 1.svg";
 import julian from "../../assets/images/julian_dorey.jpg";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const Testimonial = () => {
     const sliderRef1 = useRef(null);
     const sliderRef2 = useRef(null);
+    const svgRef = useRef(null);
+
+    const isInView = useInView(svgRef, { once: true });
+
     const { scrollYProgress: scrollYProgress1 } = useScroll({
         target: sliderRef1,
         offset: ['0 1', '1 0']
@@ -26,7 +30,7 @@ const Testimonial = () => {
 			id="testimonial"
 		>
 			{/* heading */}
-			<div className="relative flex justify-center my-20">
+			<div ref={svgRef} className="relative flex justify-center my-20">
 				<h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-gray-dark tracking-wide">
 					Snippets of
 					<span className="text-yellow w-full mx-auto pl-4">
@@ -34,19 +38,31 @@ const Testimonial = () => {
 					</span>
 				</h1>
 				{/* heart */}
-				<img
+				<motion.img
+					style={{
+						scale: isInView ? 1 : 0,
+						transitionDuration: "0.7s",
+					}}
 					src={heart}
 					alt=""
 					className="absolute -top-10 lg:-top-20 right-1/4 lg:right-1/3 w-14 "
 				/>
 				{/* like */}
-				<img
+				<motion.img
+					style={{
+						scale: isInView ? 1 : 0,
+						transitionDuration: "0.7s",
+					}}
 					src={like}
 					alt=""
 					className="absolute -top-16 lg:-top-20 left-1/4 lg:left-1/3 w-14"
 				/>
 				{/* thumbs up fill */}
-				<img
+				<motion.img
+					style={{
+						scale: isInView ? 1 : 0,
+						transitionDuration: "0.7s",
+					}}
 					src={thumbs_fill}
 					alt=""
 					className="absolute top-10 lg:top-24 w-14 left-1/2"

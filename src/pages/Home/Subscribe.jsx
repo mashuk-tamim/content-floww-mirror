@@ -10,24 +10,40 @@ import { motion, useInView } from "framer-motion";
 import Button from "../../component/Button3/BUtton3";
 
 const Subscribe = () => {
-	const cardRef = useRef(null);
-	const isInView = useInView(cardRef, {
+    const cardRef = useRef(null);
+    const svgRef = useRef(null);
+
+	const isSvgInView = useInView(svgRef, { once: false });
+	const isCardInView = useInView(cardRef, {
 		once: true,
 	});
 	const delay = 0.3;
 
 	return (
 		<section className="bg-clientBg font-poppins overflow-hidden">
-			<div className="flex flex-col items-center py-28 space-y-5 lg:space-y-8">
+			<div
+				ref={svgRef}
+				className="flex flex-col items-center py-28 space-y-5 lg:space-y-8"
+			>
 				<div className="flex gap-3 md:gap-5 lg:right-44 relative lg:left-20">
 					{/* star no fill*/}
-					<img
+					<motion.img
+						style={{
+							scale: isSvgInView ? 1 : 0,
+							transitionDuration: "0.7s",
+							transitionDelay: "0.3s",
+						}}
 						src={starNoFill}
 						alt=""
 						className="w-6 md:w-8 relative md:top-5 lg:top-10 -left-5"
 					/>
 					{/* crown */}
-					<img
+					<motion.img
+						style={{
+							scale: isSvgInView ? 1 : 0,
+							transitionDuration: "0.7s",
+							transitionDelay: "0.3s",
+						}}
 						src={crown}
 						alt=""
 						className="relative -top-10 lg:-top-14 left-[52px] lg:left-[68px] w-8 lg:w-12"
@@ -47,7 +63,16 @@ const Subscribe = () => {
 						tomorrow
 					</h1>
 					{/* line */}
-					<img src={arrow} alt="" className="w-16 md:w-24 lg:w-36" />
+					<motion.img
+						style={{
+							y: isSvgInView ? 0 : 100,
+							transitionDuration: "0.7s",
+							transitionDelay: "0.3s",
+						}}
+						src={arrow}
+						alt=""
+						className="w-16 md:w-24 lg:w-36"
+					/>
 				</div>
 				<div>
 					<p className="text-black font-medium text-center mx-auto">
@@ -57,13 +82,16 @@ const Subscribe = () => {
 					</p>
 				</div>
 			</div>
-			<div ref={cardRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-5 md:gap-5 lg:gap-8 w-full md:w-11/12 mx-auto">
+			<div
+				ref={cardRef}
+				className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-5 md:gap-5 lg:gap-8 w-full md:w-11/12 mx-auto"
+			>
 				{values.map((value) => {
 					return (
 						<motion.div
 							style={{
-								y: isInView ? "0px" : "100px",
-								opacity: isInView ? 1 : 0,
+								y: isCardInView ? "0px" : "100px",
+								opacity: isCardInView ? 1 : 0,
 								transitionDuration: "0.5s",
 								transitionDelay: `${value.id * delay}s`,
 							}}
@@ -73,9 +101,17 @@ const Subscribe = () => {
 								className={`text-black ${value.cardBg} p-5 w-11/12 md:w-80 lg:w-[380px] lg:h-[710px] rounded-2xl shadow-xl`}
 							>
 								<div className="">
-									<p className="text-lg font-semibold">
-										{value.plan}
-									</p>
+									<div className="flex justify-between">
+										<p className="text-lg font-semibold">
+											{value.plan}
+										</p>
+										{value.isMostTrending === "true" && (
+											<p className="bg-[#ff7332] text-white rounded-bl-lg rounded-tr-2xl flex items-center h-8 p-2 -mt-5 -mr-5">
+												Most Trending
+											</p>
+										)}
+										{/* <div className="bg-[#ff7332] w-[40%] h-8 -mt-5 flex justify-end"></div> */}
+									</div>
 									<h2 className="text-4xl font-bold py-10">
 										${value.price}/
 										<span className="text-xl font-semibold relative">
@@ -86,12 +122,10 @@ const Subscribe = () => {
 										{value.planIncludes}
 									</p>
 									<div className="pb-10">
-										{/* <button
-											className={`button relative inline-flex justify-center border-black items-center w-full py-3 border-2 rounded-md ${value.btnBg} ${value.btnTextColor} font-semibold text-xl tracking-widest overflow-hidden before:absolute before:translate-x-[-50%] before:translate-y-[-50%] before:left-1/2 before:top-0 before:w-0 before:h-0 before:rounded-full before:bg-yellow hover:before:w-[400px] hover:before:h-[400px] hover:text-black before:-z-10 before:ease-in-out hover:bg-yellow`}
-										>
-											{value.btnText}
-										</button> */}
-                                        <Button text={value.btnText} btnBg={value.btnBg}></Button>
+										<Button
+											text={value.btnText}
+											btnBg={value.btnBg}
+										></Button>
 									</div>
 
 									<div className="border-[0.5px] border-black"></div>
