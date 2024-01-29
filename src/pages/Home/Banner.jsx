@@ -1,8 +1,8 @@
-import Button from "../../component/Button/Button";
 import oBg from "../../assets/svg/64fad820a80abcc43e9a6ade_4k_Abstract_3840x2160 1.webp";
 import heroArrow from "../../assets/svg/hero-arrow.svg";
 import bannerBg from "../../assets/svg/651438da4d065110b561b1b2_hero-bg-blocks.svg";
 import { motion } from "framer-motion";
+import Button from "../../component/Button/Button";
 
 const Banner = () => {
 	const bannerStyle = {
@@ -72,10 +72,8 @@ const Banner = () => {
 					}}
 				/>
 				<div className="flex flex-col md:flex-row gap-5 justify-center items-center relative md:-top-24 lg:-top-44">
-					<Button text="View Pricing"></Button>
-					<button className="button relative inline-flex justify-center items-center w-48 py-3.5 border-2 rounded-md bg-white border-white text-black font-semibold text-xl overflow-hidden before:absolute before:translate-x-[-50%] before:translate-y-[-50%] before:left-1/2 before:top-0 before:w-0 before:h-0 before:rounded-full before:bg-yellow hover:before:w-[400px] hover:before:h-[400px] hover:text-black before:-z-10 before:ease-in-out">
-						Book a Call
-					</button>
+					<Button text="View Pricing" btnBg="bg-[#000000]"></Button>
+					<Button text="Book a Call" btnBg="bg-[#ffffff]"></Button>
 				</div>
 			</div>
 		</section>

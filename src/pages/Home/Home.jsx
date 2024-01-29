@@ -17,7 +17,7 @@ import Workflow from "./Workflow";
 
 const Home = () => {
 	return (
-		<div>
+		<div className="">
 			<Navbar></Navbar>
             <Banner></Banner>
             <Users></Users>

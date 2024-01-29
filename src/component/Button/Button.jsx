@@ -1,41 +1,63 @@
-import { useEffect } from "react";
-import PropTypes from "prop-types"; 
+import PropTypes from "prop-types";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
-const Button = ({ text }) => {
-    // console.log(text);
-	useEffect(() => {
-		if (typeof window !== "undefined") {
-			const btn = document.querySelector(".button");
-
-			const handleMouseMove = (e) => {
-				const x = e.pageX - btn.offsetLeft;
-				const y = e.pageY - btn.offsetTop;
-
-				btn.style.setProperty("--x", x + "px");
-				btn.style.setProperty("--y", y + "px");
-			};
-
-			btn.addEventListener("mousemove", handleMouseMove);
-
-			return () => {
-				// Cleanup the event listener when the component unmounts
-				btn.removeEventListener("mousemove", handleMouseMove);
-			};
-		}
-	}, []);
+const Button = ({ text, btnBg }) => {
+	const [isHovered, setIsHovered] = useState(false);
+	const handleMouseEnter = () => {
+		setIsHovered(true);
+		console.log("hovered", isHovered);
+	};
+	const handleMouseLeave = () => {
+		setIsHovered(false);
+		console.log("not hovered", isHovered);
+	};
 	return (
-		<div className="">
+		<div>
 			<button
-				className="button relative inline-flex justify-center items-center w-48 py-3.5 border-2 rounded-md border-white text-white font-semibold text-xl overflow-hidden before:absolute before:translate-x-[-50%] before:translate-y-[-50%] before:left-1/2 before:top-0 before:w-0 before:h-0 before:rounded-full before:bg-yellow hover:before:w-[400px] hover:before:h-[400px] hover:text-black before:-z-10 before:ease-in-out"
+				className={`relative inline-flex justify-center items-center w-48 h-16 ${btnBg} border-2 rounded-md border-white hover:border-none font-semibold text-xl overflow-hidden ${
+					btnBg === "bg-[#000000]"
+						? isHovered
+							? "text-black"
+							: "text-white"
+						: isHovered
+						? "text-black"
+						: "text-black"
+				} `}
+				onMouseEnter={handleMouseEnter}
+				onMouseLeave={handleMouseLeave}
 			>
-				{text}
+				<div className="w-full absolute z-10">{text}</div>
+				<motion.div
+					className="absolute -top-20 z-0"
+					animate={{
+						scale: isHovered ? 3 : 0,
+						transition: {
+							duration: 0.3,
+						},
+					}}
+					initial={{
+						scale: 0,
+					}}
+				>
+					<svg
+						width="100"
+						height="100"
+						viewBox="0 0 100 100"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<circle cx="50" cy="50" r="50" fill="#f0b428" />
+					</svg>
+				</motion.div>
 			</button>
 		</div>
 	);
 };
 
-Button.propTypes = {
-    text: PropTypes.string.isRequired,
-}
-
 export default Button;
+
+Button.propTypes = {
+	text: PropTypes.string,
+	btnBg: PropTypes.string,
+};

@@ -7,7 +7,7 @@ import redHeart from "../../assets/svg/red_heart.svg"
 
 const Footer = () => {
     return (
-		<section className="text-white font-poppins w-11/12 mx-auto space-y-10 py-28">
+		<section className="text-white font-poppins w-11/12 mx-auto space-y-10 py-28 overflow-hidden">
 			<div className="flex flex-col lg:flex-row justify-between gap-10">
 				<div className="flex flex-col md:flex-row text-center md:justify-between lg:gap-5">
 					<div>

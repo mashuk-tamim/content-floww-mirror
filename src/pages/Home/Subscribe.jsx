@@ -16,7 +16,7 @@ const Subscribe = () => {
 	const delay = 0.3;
 
 	return (
-		<section className="bg-clientBg font-poppins" id="subscribe">
+		<section className="bg-clientBg font-poppins overflow-hidden">
 			<div className="flex flex-col items-center py-28 space-y-5 lg:space-y-8">
 				<div className="flex gap-3 md:gap-5 lg:right-44 relative lg:left-20">
 					{/* star no fill*/}

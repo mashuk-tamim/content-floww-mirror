@@ -1,4 +1,4 @@
-import video1 from "../../assets/videos/Ancient_Amazonian.mp4";
+// import video1 from "../../assets/videos/Ancient_Amazonian.mp4";
 import heart from "../../assets/svg/64fb140be929f613abf78dee_Heart.svg";
 import like from "../../assets/svg/64fb14209552ef390591774b_like.svg";
 import quote from "../../assets/svg/64fb0d9a3dc59b592ac6cf08_quote.svg";
@@ -26,7 +26,7 @@ const Testimonial = () => {
 			id="testimonial"
 		>
 			{/* heading */}
-			<div className="relative flex justify-center mb-20">
+			<div className="relative flex justify-center my-20">
 				<h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-gray-dark tracking-wide">
 					Snippets of
 					<span className="text-yellow w-full mx-auto pl-4">

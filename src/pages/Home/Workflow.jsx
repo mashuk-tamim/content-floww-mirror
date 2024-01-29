@@ -103,5 +103,4 @@ export default Workflow;
 
 Card.propTypes = {
 	card: PropTypes.object.isRequired,
-	cardVariant: PropTypes.object.isRequired,
 };

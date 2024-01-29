@@ -9,7 +9,7 @@ import certificate from "../../assets/gif/certificate.gif"
 
 const WhyChooseUs = () => {
 	return (
-		<section className="font-poppins bg-black py-20">
+		<section className="font-poppins bg-black py-20 overflow-hidden">
 			<div className="flex flex-col items-center relative md:left-20">
 				<div className="flex gap-3 md:gap-5 absolute">
 					{/* star no-fill */}

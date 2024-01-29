@@ -1,12 +1,10 @@
-import Button from "../../component/Button/Button";
 import starFill from "../../assets/svg/64fc1a63ad4bc0f51d3653b9_star filled.svg";
 import starNoFill from "../../assets/svg/64fb2c7ec087160e4c6764f3_Yellow Star no fill.svg";
-
-
+import Button from "../../component/Button/Button";
 
 const Calender = () => {
-    return (
-		<section className="font-poppins text-white text-center w-11/12 mx-auto">
+	return (
+		<section className="font-poppins text-white text-center w-11/12 mx-auto overflow-hidden">
 			<h1 className="text-2xl md:text-5xl lg:text-6xl font-semibold pb-10 md:pb-16">
 				Enough of generic videos edited for the sake of editing
 			</h1>
@@ -14,7 +12,9 @@ const Calender = () => {
 				Pick a plan of your choice and spice up your online presence
 				today
 			</p>
-			<Button text={"Start Now"}></Button>
+			<div>
+				<Button text={"Start Now"} btnBg="bg-[#000000]"></Button>
+			</div>
 			{/* star fill */}
 			<img
 				src={starFill}

@@ -1,11 +1,11 @@
 import { GiHamburgerMenu } from "react-icons/gi";
 import "./Navbar.css";
-import Button from "../../component/Button/Button";
 import { useEffect, useState } from "react";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import logoFull from "../../assets/images/64fadbb094b748a8ca80754f_ContentFloww Logo.png";
 import logoShort from "../../assets/images/6515185a35220003dbc671fd_fontentfloww C logo.png";
 import { Link } from "react-scroll";
+import Button from "../../component/Button/Button";
 
 
 const navLinks = (
@@ -160,7 +160,7 @@ const Navbar = () => {
 			</div>
 			{navTwo || (
 				<div className="navbar-end pr-3 lg:pr-16 hidden lg:flex z-10">
-					<Button text="Start Now"></Button>
+					<Button text="Start Now" btnBg="bg-[#000000]"></Button>
 				</div>
 			)}
 		</motion.nav>
