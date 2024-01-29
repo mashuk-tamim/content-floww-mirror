@@ -7,6 +7,7 @@ import star from "../../assets/svg/6597f6da265c4ccf70b5e684_star-ta.svg";
 import call from "../../assets/svg/call1.svg";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import Button from "../../component/Button3/BUtton3";
 
 const Subscribe = () => {
 	const cardRef = useRef(null);
@@ -69,7 +70,7 @@ const Subscribe = () => {
 							key={value.id}
 						>
 							<div
-								className={`text-black bg-[${value.cardBg}] p-5 w-11/12 md:w-80 lg:w-[380px] lg:h-[710px] rounded-2xl shadow-xl`}
+								className={`text-black ${value.cardBg} p-5 w-11/12 md:w-80 lg:w-[380px] lg:h-[710px] rounded-2xl shadow-xl`}
 							>
 								<div className="">
 									<p className="text-lg font-semibold">
@@ -85,11 +86,12 @@ const Subscribe = () => {
 										{value.planIncludes}
 									</p>
 									<div className="pb-10">
-										<button
-											className={`button relative inline-flex justify-center border-black items-center w-full py-3 border-2 rounded-md bg-[${value.btnBg}] text-[${value.btnTextColor}] font-semibold text-xl tracking-widest overflow-hidden before:absolute before:translate-x-[-50%] before:translate-y-[-50%] before:left-1/2 before:top-0 before:w-0 before:h-0 before:rounded-full before:bg-yellow hover:before:w-[400px] hover:before:h-[400px] hover:text-black before:-z-10 before:ease-in-out hover:bg-yellow`}
+										{/* <button
+											className={`button relative inline-flex justify-center border-black items-center w-full py-3 border-2 rounded-md ${value.btnBg} ${value.btnTextColor} font-semibold text-xl tracking-widest overflow-hidden before:absolute before:translate-x-[-50%] before:translate-y-[-50%] before:left-1/2 before:top-0 before:w-0 before:h-0 before:rounded-full before:bg-yellow hover:before:w-[400px] hover:before:h-[400px] hover:text-black before:-z-10 before:ease-in-out hover:bg-yellow`}
 										>
 											{value.btnText}
-										</button>
+										</button> */}
+                                        <Button text={value.btnText} btnBg={value.btnBg}></Button>
 									</div>
 
 									<div className="border-[0.5px] border-black"></div>
@@ -113,7 +115,7 @@ const Subscribe = () => {
 									})}
 								</div>
 								<div
-									className={`bg-[${value.bestForBg}] border-[1px] border-white text-[#ff7332] mt-5 p-2 rounded-xl flex items-center gap-2`}
+									className={`${value.bestForBg} border-[1px] border-white text-[#ff7332] mt-5 p-2 rounded-xl flex items-center gap-2`}
 								>
 									<img
 										src={star}
@@ -170,13 +172,13 @@ export default Subscribe;
 const values = [
 	{
 		id: 1,
-		cardBg: "#fde7cc",
+		cardBg: "bg-[#fde7cc]",
 		plan: "Basic",
 		price: "2499",
 		planIncludes: "20 Short videos",
 		btnText: "Start Now",
-		btnTextColor: "#000000",
-		btnBg: "#000000",
+		btnTextColor: "text-[#000000]",
+		btnBg: "bg-[#000000]",
 		isMostTrending: "false",
 		planDetails: [
 			{
@@ -209,17 +211,17 @@ const values = [
 			},
 		],
 		bestFor: "Best for podcasters",
-		bestForBg: "#fef1e0",
+		bestForBg: "bg-[#fef1e0]",
 	},
 	{
 		id: 2,
-		cardBg: "#faca91",
+		cardBg: "bg-[#faca91]",
 		plan: "Growth",
 		price: "3999",
 		planIncludes: "15 Short videos + 10 animation edits",
 		btnText: "Join Waitlist",
-		btnTextColor: "#000000",
-		btnBg: "#000000",
+		btnTextColor: "text-[#000000]",
+		btnBg: "bg-[#000000]",
 		isMostTrending: "true",
 		planDetails: [
 			{
@@ -240,17 +242,17 @@ const values = [
 			},
 		],
 		bestFor: "Best for creators/ brands serious about organic growth",
-		bestForBg: "#fcdfbd",
+		bestForBg: "bg-[#fcdfbd]",
 	},
 	{
 		id: 3,
-		cardBg: "#f7b05b",
+		cardBg: "bg-[#f7b05b]",
 		plan: "Platinum",
 		price: "6999",
 		planIncludes: "Complete organic growth package",
 		btnText: "Book a call",
-		btnTextColor: "#ffffff",
-		btnBg: "#ffffff",
+		btnTextColor: "text-[#ffffff]",
+		btnBg: "bg-[#ffffff]",
 		isMostTrending: "false",
 		planDetails: [
 			{
@@ -267,6 +269,6 @@ const values = [
 			},
 		],
 		bestFor: "For Outliers",
-		bestForBg: "#fad09d",
+		bestForBg: "bg-[#fad09d]",
 	},
 ];

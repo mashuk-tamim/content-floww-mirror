@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-const Button = ({ text, btnBg, isBorder, width }) => {
+const Button = ({ text, btnBg }) => {
 	const [isHovered, setIsHovered] = useState(false);
 	const handleMouseEnter = () => {
 		setIsHovered(true);
@@ -15,7 +15,7 @@ const Button = ({ text, btnBg, isBorder, width }) => {
 	return (
 		<div>
 			<button
-				className={`relative inline-flex justify-center items-center w-48 h-16 ${btnBg} border-2 rounded-md border-white hover:border-none font-semibold text-xl overflow-hidden ${
+				className={`relative inline-flex justify-center items-center w-full h-14 ${btnBg} hover:border-2 rounded-md hover:border-black transition-all font-semibold text-xl overflow-hidden ${
 					btnBg === "bg-[#000000]"
 						? isHovered
 							? "text-black"
@@ -31,7 +31,7 @@ const Button = ({ text, btnBg, isBorder, width }) => {
 				<motion.div
 					className="absolute -top-20 z-0"
 					animate={{
-						scale: isHovered ? 3 : 0,
+						scale: isHovered ? 4 : 0,
 						transition: {
 							duration: 0.3,
 						},
