@@ -1,5 +1,5 @@
 import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
-// import arrow from "../../../assets/svg/hero-arrow.svg"
+// import arrow from "../../../../assets/svg/hero-arrow.svg"
 import julian from "../../../assets/images/julian_dorey.jpg";
 import parmita from "../../../assets/images/cheerful-muslim-woman-compressed.jpg";
 import arrow from "../../../assets/svg/64fb1bf7246f0314b3bb34b4_arrow projects.svg"
@@ -29,7 +29,7 @@ const ClientResults = () => {
 
 	const handleMouseMove1 = (e) => {
 		const { clientX, clientY } = e;
-		console.log(clientX);
+		// console.log(clientX);
 		// if (clientX < 500) {
 		//     mouse.x.set(clientX + 200);
 

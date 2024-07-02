@@ -1,13 +1,13 @@
-import crown from "../../assets/svg/crown_orange.svg";
-import starNoFill from "../../assets/svg/64fb2c7ec087160e4c6764f3_Yellow Star no fill.svg";
-import arrow from "../../assets/svg/arrow_orange.svg";
-import pointArrow from "../../assets/svg/pricinf-arrow.svg";
-import star from "../../assets/svg/6597f6da265c4ccf70b5e684_star-ta.svg";
+import crown from "../../../assets/svg/crown_orange.svg";
+import starNoFill from "../../../assets/svg/64fb2c7ec087160e4c6764f3_Yellow Star no fill.svg";
+import arrow from "../../../assets/svg/arrow_orange.svg";
+import pointArrow from "../../../assets/svg/pricinf-arrow.svg";
+import star from "../../../assets/svg/6597f6da265c4ccf70b5e684_star-ta.svg";
 
-import call from "../../assets/svg/call1.svg";
+import call from "../../../assets/svg/call1.svg";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import Button from "../../component/Button3/BUtton3";
+import Button from "../../../component/Button3/BUtton3";
 
 const Subscribe = () => {
     const cardRef = useRef(null);
@@ -20,7 +20,7 @@ const Subscribe = () => {
 	const delay = 0.3;
 
 	return (
-		<section className="bg-clientBg font-poppins overflow-hidden">
+		<section className="bg-clientBg font-poppins overflow-hidden" id="subscribe">
 			<div
 				ref={svgRef}
 				className="flex flex-col items-center py-28 space-y-5 lg:space-y-8"
@@ -76,9 +76,8 @@ const Subscribe = () => {
 				</div>
 				<div>
 					<p className="text-black font-medium text-center mx-auto">
-						Hire a personal team of expert copywriters and video
-						artists in one click.<br></br> No contracts, no hiring,
-						no management!
+						Hire a personal team of expert copywriters and video artists in one
+						click.<br></br> No contracts, no hiring, no management!
 					</p>
 				</div>
 			</div>
@@ -102,9 +101,7 @@ const Subscribe = () => {
 							>
 								<div className="">
 									<div className="flex justify-between">
-										<p className="text-lg font-semibold">
-											{value.plan}
-										</p>
+										<p className="text-lg font-semibold">{value.plan}</p>
 										{value.isMostTrending === "true" && (
 											<p className="bg-[#ff7332] text-white rounded-bl-lg rounded-tr-2xl flex items-center h-8 p-2 -mt-5 -mr-5">
 												Most Trending
@@ -118,14 +115,9 @@ const Subscribe = () => {
 											month
 										</span>
 									</h2>
-									<p className="font-medium pb-8">
-										{value.planIncludes}
-									</p>
+									<p className="font-medium pb-8">{value.planIncludes}</p>
 									<div className="pb-10">
-										<Button
-											text={value.btnText}
-											btnBg={value.btnBg}
-										></Button>
+										<Button text={value.btnText} btnBg={value.btnBg}></Button>
 									</div>
 
 									<div className="border-[0.5px] border-black"></div>
@@ -137,9 +129,7 @@ const Subscribe = () => {
 												<img src={pointArrow} alt="" />
 												<p
 													className={`${
-														i.isBold === "false"
-															? "font-md"
-															: "font-bold"
+														i.isBold === "false" ? "font-md" : "font-bold"
 													} `}
 												>
 													{i.text}
@@ -151,11 +141,7 @@ const Subscribe = () => {
 								<div
 									className={`${value.bestForBg} border-[1px] border-white text-[#ff7332] mt-5 p-2 rounded-xl flex items-center gap-2`}
 								>
-									<img
-										src={star}
-										alt=""
-										className="w-6 md:w-8"
-									/>
+									<img src={star} alt="" className="w-6 md:w-8" />
 									<p>{value.bestFor}</p>
 								</div>
 							</div>
@@ -166,9 +152,7 @@ const Subscribe = () => {
 			<div className="grid grid-cols-2 lg:grid-cols-3 gap-5 text-black w-11/12 mx-auto pt-14 md:pt-20 pb-20 md:pb-28">
 				<div className="border border-black rounded-2xl px-3 py-5 md:p-5 lg:px-12 lg:py-8 space-y-5 lg:col-span-2">
 					<img src={call} alt="" className="w-20" />
-					<h2 className="md:text-xl lg:text-4xl font-bold">
-						Book a Call
-					</h2>
+					<h2 className="md:text-xl lg:text-4xl font-bold">Book a Call</h2>
 					<p className="font-medium">Have custom requirement?</p>
 					<div>
 						<a
@@ -182,9 +166,7 @@ const Subscribe = () => {
 				</div>
 				<div className="border border-black rounded-2xl px-3 py-5 md:p-5 lg:px-12 lg:py-8 space-y-5">
 					<img src={call} alt="" className="w-20" />
-					<h2 className="md:text-xl lg:text-4xl font-bold">
-						Book a Call
-					</h2>
+					<h2 className="md:text-xl lg:text-4xl font-bold">Book a Call</h2>
 					<p className="font-medium">Have custom requirement?</p>
 					<div>
 						<a

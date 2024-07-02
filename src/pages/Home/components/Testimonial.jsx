@@ -1,9 +1,9 @@
-// import video1 from "../../assets/videos/Ancient_Amazonian.mp4";
-import heart from "../../assets/svg/64fb140be929f613abf78dee_Heart.svg";
-import like from "../../assets/svg/64fb14209552ef390591774b_like.svg";
-import quote from "../../assets/svg/64fb0d9a3dc59b592ac6cf08_quote.svg";
-import thumbs_fill from "../../assets/svg/64fb142c51d65e51f3884619_thumb-up 1.svg";
-import julian from "../../assets/images/julian_dorey.jpg";
+import video1 from "../../../assets/videos/Ancient_Amazonian.mp4";
+import heart from "../../../assets/svg/64fb140be929f613abf78dee_Heart.svg";
+import like from "../../../assets/svg/64fb14209552ef390591774b_like.svg";
+import quote from "../../../assets/svg/64fb0d9a3dc59b592ac6cf08_quote.svg";
+import thumbs_fill from "../../../assets/svg/64fb142c51d65e51f3884619_thumb-up 1.svg";
+import julian from "../../../assets/images/julian_dorey.jpg";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { useRef } from "react";
 
@@ -82,7 +82,7 @@ const Testimonial = () => {
 							<div className="flex gap-3 items-center justify-center my-10">
 								<div className="hidden md:flex bg-[#fafafa] border px-2 pt-2 md:pb-8 lg:pb-14 rounded-2xl md:w-[150px] lg:w-44 md:h-[280px] lg:h-[350px]">
 									<video
-										src={"video1"}
+										src={video1}
 										controls
 										autoPlay
 										muted
@@ -131,7 +131,7 @@ const Testimonial = () => {
 							<div className="flex gap-3 items-center justify-center">
 								<div className="hidden md:flex bg-[#fafafa] border px-2 pt-2 md:pb-8 lg:pb-14 rounded-2xl md:w-[150px] lg:w-44 md:h-[280px] lg:h-[350px]">
 									<video
-										src={"video1"}
+										src={video1}
 										controls
 										autoPlay
 										muted

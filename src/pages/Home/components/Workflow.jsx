@@ -6,14 +6,14 @@ import {
 } from "framer-motion";
 import PropTypes from "prop-types";
 import { useRef } from "react";
-import rawFootage from "../../assets/svg/Send_raw_footage.svg"
-import notion from "../../assets/svg/Notion_Logo.svg"
-import slack from "../../assets/svg/slack _Logo.svg"
-import frameIO from "../../assets/svg/Frameio_Logo .svg"
-import hootsuite from "../../assets/svg/hootsuite_Logo.svg"
-import leafNoFillTop from "../../assets/svg/leaf_no_fill.svg";
-import leafNoFillBottom from "../../assets/svg/leaf_no_fill_below.svg";
-import leafFill from "../../assets/svg/leaf2.svg";
+import rawFootage from "../../../assets/svg/Send_raw_footage.svg"
+import notion from "../../../assets/svg/Notion_Logo.svg"
+import slack from "../../../assets/svg/slack _Logo.svg"
+import frameIO from "../../../assets/svg/Frameio_Logo .svg"
+import hootsuite from "../../../assets/svg/hootsuite_Logo.svg"
+import leafNoFillTop from "../../../assets/svg/leaf_no_fill.svg";
+import leafNoFillBottom from "../../../assets/svg/leaf_no_fill_below.svg";
+import leafFill from "../../../assets/svg/leaf2.svg";
 
 
 const Workflow = () => {

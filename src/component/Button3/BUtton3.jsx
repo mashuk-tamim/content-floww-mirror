@@ -6,11 +6,11 @@ const Button = ({ text, btnBg }) => {
 	const [isHovered, setIsHovered] = useState(false);
 	const handleMouseEnter = () => {
 		setIsHovered(true);
-		console.log("hovered", isHovered);
+		// console.log("hovered", isHovered);
 	};
 	const handleMouseLeave = () => {
 		setIsHovered(false);
-		console.log("not hovered", isHovered);
+		// console.log("not hovered", isHovered);
 	};
 	return (
 		<div>

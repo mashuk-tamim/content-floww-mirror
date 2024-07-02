@@ -1,12 +1,12 @@
-import starLine from "../../assets/svg/64fc752bf3e576a13b51fa47_Group 3602.svg";
-import starNoFilled from "../../assets/svg/64fb2c7ec087160e4c6764f3_Yellow Star no fill.svg";
-import rocket from "../../assets/svg/64fc76c06b4ef83f4e3176c6_0885736b-4cf2-49b2-bd2d-rocket.svg";
-import starFilled from "../../assets/svg/64fc1a63ad4bc0f51d3653b9_star filled.svg";
-import video1 from "../../assets/videos/Palestinian_boy_cries_for_parents.mp4";
-import video2 from "../../assets/videos/Palestine_West_Bank_reality.mp4";
-import video3 from "../../assets/videos/Elon_Musk_EXPOSES.mp4";
-import video4 from "../../assets/videos/BEFORE_You_Celebrate_CHRISTMAS.mp4";
-// import video1 from "../../assets/videos/media_files";
+import starLine from "../../../assets/svg/64fc752bf3e576a13b51fa47_Group 3602.svg";
+import starNoFilled from "../../../assets/svg/64fb2c7ec087160e4c6764f3_Yellow Star no fill.svg";
+import rocket from "../../../assets/svg/64fc76c06b4ef83f4e3176c6_0885736b-4cf2-49b2-bd2d-rocket.svg";
+import starFilled from "../../../assets/svg/64fc1a63ad4bc0f51d3653b9_star filled.svg";
+import video1 from "../../../assets/videos/Palestinian_boy_cries_for_parents.mp4";
+import video2 from "../../../assets/videos/Palestine_West_Bank_reality.mp4";
+import video3 from "../../../assets/videos/Elon_Musk_EXPOSES.mp4";
+import video4 from "../../../assets/videos/BEFORE_You_Celebrate_CHRISTMAS.mp4";
+// import video1 from "../../../assets/videos/media_files";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 

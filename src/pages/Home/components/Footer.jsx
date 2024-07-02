@@ -1,9 +1,9 @@
-import logoFull from "../../assets/images/64fadbb094b748a8ca80754f_ContentFloww Logo.png"
-import instagram from "../../assets/svg/instagram.svg"
-import twitter from "../../assets/svg/twitter.svg"
-import linkedin from "../../assets/svg/linkedin.svg"
-import hello from "../../assets/svg/hello.svg"
-import redHeart from "../../assets/svg/red_heart.svg"
+import logoFull from "../../../assets/images/64fadbb094b748a8ca80754f_ContentFloww Logo.png"
+import instagram from "../../../assets/svg/instagram.svg"
+import twitter from "../../../assets/svg/twitter.svg"
+import linkedin from "../../../assets/svg/linkedin.svg"
+import hello from "../../../assets/svg/hello.svg"
+import redHeart from "../../../assets/svg/red_heart.svg"
 
 const Footer = () => {
     return (

@@ -1,10 +1,10 @@
-import tape from "../../assets/svg/tape.svg";
-import cardImg from "../../assets/images/64fb309611b75356c1882c72_Frame 427320702.webp";
-import YellowArrow from "../../component/Svg/YellowArrow";
+import tape from "../../../assets/svg/tape.svg";
+import cardImg from "../../../assets/images/64fb309611b75356c1882c72_Frame 427320702.webp";
+import YellowArrow from "../../../component/Svg/YellowArrow";
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import StarNoFill from "../../component/Svg/StarNoFill";
+import StarNoFill from "../../../component/Svg/StarNoFill";
 
 const Steps = () => {
 	const stepRef1 = useRef(null);

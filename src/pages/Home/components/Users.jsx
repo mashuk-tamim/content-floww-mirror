@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import instagramHover from "../../assets/svg/65117cc3431493a95c4e5954_insta-hover.svg";
-import youtubeHover from "../../assets/svg/6512d1714a9e9a508d2ba1d6_hover-youtube.svg";
-import FramerMagnetic from "../../component/FramerMagnetic/FramerMagnetic";
+import instagramHover from "../../../assets/svg/65117cc3431493a95c4e5954_insta-hover.svg";
+import youtubeHover from "../../../assets/svg/6512d1714a9e9a508d2ba1d6_hover-youtube.svg";
+import FramerMagnetic from "../../../component/FramerMagnetic/FramerMagnetic";
 
 const Users = () => {
 	const [isHOvered, setIsHovered] = useState(false);
@@ -14,11 +14,11 @@ const Users = () => {
 	};
 	const handleMouseLeave = () => {
 		setIsHovered(false);
-		console.log(isHOvered);
+		// console.log(isHOvered);
 	};
 	// const [users, setUsers] = useState([]);
 	useEffect(() => {
-		console.log(isHOvered);
+		// console.log(isHOvered);
 	}, [isHOvered]);
 
 	return (
@@ -35,7 +35,7 @@ const Users = () => {
 											isHOvered && userId === user.id
 												? "grayscale-0"
 												: "grayscale"
-										} grayscale mb-3 border`}
+										} grayscale mb-3`}
 										style={{}}
 										initial={{}}
 										onMouseEnter={() =>

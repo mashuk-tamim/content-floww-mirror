@@ -1,8 +1,8 @@
-import oBg from "../../assets/svg/64fad820a80abcc43e9a6ade_4k_Abstract_3840x2160 1.webp";
-import heroArrow from "../../assets/svg/hero-arrow.svg";
-import bannerBg from "../../assets/svg/651438da4d065110b561b1b2_hero-bg-blocks.svg";
+import oBg from "../../../assets/svg/64fad820a80abcc43e9a6ade_4k_Abstract_3840x2160 1.webp";
+import heroArrow from "../../../assets/svg/hero-arrow.svg";
+import bannerBg from "../../../assets/svg/651438da4d065110b561b1b2_hero-bg-blocks.svg";
 import { motion } from "framer-motion";
-import Button from "../../component/Button/Button";
+import Button from "../../../component/Button/Button";
 
 const Banner = () => {
 	const bannerStyle = {

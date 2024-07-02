@@ -2,11 +2,10 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import "./Navbar.css";
 import { useEffect, useState } from "react";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
-import logoFull from "../../assets/images/64fadbb094b748a8ca80754f_ContentFloww Logo.png";
-import logoShort from "../../assets/images/6515185a35220003dbc671fd_fontentfloww C logo.png";
+import logoFull from "../../../assets/images/64fadbb094b748a8ca80754f_ContentFloww Logo.png";
+import logoShort from "../../../assets/images/6515185a35220003dbc671fd_fontentfloww C logo.png";
 import { Link } from "react-scroll";
-import Button from "../../component/Button/Button";
-
+import Button from "../../../component/Button/Button";
 
 const navLinks = (
 	<div className="flex flex-col lg:flex-row font-semibold text-white text-xs md:text-sm lg:text-base gap-6">
@@ -88,18 +87,18 @@ const Navbar = () => {
 		// } else {
 		// 	setHidden(false);
 		// }
-		console.log(latest);
+		// console.log(latest);
 		if (latest > 800) {
-            setNavTwo(true);
-            localStorage.setItem("navTwo", JSON.stringify(true));
+			setNavTwo(true);
+			localStorage.setItem("navTwo", JSON.stringify(true));
 		} else {
-            setNavTwo(false);
-             localStorage.setItem("navTwo", JSON.stringify(false));
+			setNavTwo(false);
+			localStorage.setItem("navTwo", JSON.stringify(false));
 		}
 	});
 
 	useEffect(() => {
-		console.log(navTwo);
+		// console.log(navTwo);
 	}, [navTwo]);
 
 	return (
@@ -114,11 +113,7 @@ const Navbar = () => {
 		>
 			{navTwo || (
 				<div className="navbar-start pl-3 lg:pl-16 flex items-center">
-					<img
-						src={logoFull}
-						alt="full logo"
-						className="hidden md:flex"
-					/>
+					<img src={logoFull} alt="full logo" className="hidden md:flex" />
 					<div>
 						{navTwo || (
 							<div>
@@ -135,9 +130,7 @@ const Navbar = () => {
 			{navTwo ? (
 				<div className="w-full flex justify-center ">
 					<div className="navbar-center hidden lg:flex border-2 border-[#464646] rounded-2xl py-3 px-10 bg-black bg-opacity-15 backdrop-blur-md h-[70px] gap-3 justify-center">
-						<ul className="menu menu-horizontal px-1">
-							{navLinks}
-						</ul>
+						<ul className="menu menu-horizontal px-1">{navLinks}</ul>
 						<div className="h-3/5 border my-auto"></div>
 						<button className="button relative inline-flex justify-center items-center w-44 py-2 border-2 rounded-md border-white text-white font-semibold text-xl overflow-hidden before:absolute before:translate-x-[-50%] before:translate-y-[-50%] before:left-1/2 before:top-0 before:w-0 before:h-0 before:rounded-full before:bg-yellow hover:before:w-[400px] hover:before:h-[400px] hover:text-black before:-z-10 before:ease-in-out">
 							Start Now
