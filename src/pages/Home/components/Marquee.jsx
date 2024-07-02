@@ -3,9 +3,9 @@ import { FaCircle } from "react-icons/fa6";
 
 const MarqueeSection = () => {
 	return (
-		<section className="mt-40 mb-32 overflow-hidden">
+		<section className="mt-5 md:mt-40 mb-8 md:mb-32 overflow-hidden">
 			<Marquee
-				className="md:text-5xl lg:text-7xl font-bold h-32"
+				className="text-5xl lg:text-7xl font-bold h-32"
 				speed={130}
 			>
 				<div>

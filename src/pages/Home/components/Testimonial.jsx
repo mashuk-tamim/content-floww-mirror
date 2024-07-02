@@ -26,12 +26,12 @@ const Testimonial = () => {
     const x2 = useTransform(scrollYProgress2, [0, 1], [0, -300]);
 	return (
 		<section
-			className="font-poppins my-32 overflow-hidden"
+			className="font-poppins my-14 md:my-32 overflow-hidden"
 			id="testimonial"
 		>
 			{/* heading */}
 			<div ref={svgRef} className="relative flex justify-center my-20">
-				<h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-gray-dark tracking-wide">
+				<h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-gray-dark tracking-wide text-center">
 					Snippets of
 					<span className="text-yellow w-full mx-auto pl-4">
 						Satisfaction
@@ -65,7 +65,7 @@ const Testimonial = () => {
 					}}
 					src={thumbs_fill}
 					alt=""
-					className="absolute top-10 lg:top-24 w-14 left-1/2"
+					className="absolute top-20 md:top-10 lg:top-24 w-14 left-1/2"
 				/>
 			</div>
 			{/* slider 1 */}

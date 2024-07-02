@@ -97,7 +97,7 @@ const Subscribe = () => {
 							key={value.id}
 						>
 							<div
-								className={`text-black ${value.cardBg} p-5 w-11/12 md:w-80 lg:w-[380px] lg:h-[710px] rounded-2xl shadow-xl`}
+								className={`text-black ${value.cardBg} p-5 w-11/12 mx-auto md:w-80 lg:w-[380px] lg:h-[710px] rounded-2xl shadow-xl`}
 							>
 								<div className="">
 									<div className="flex justify-between">

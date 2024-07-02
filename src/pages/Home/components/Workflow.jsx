@@ -54,7 +54,7 @@ const Workflow = () => {
 							}}
 						/>
 
-						<h1 className="text-3xl md:text-5xl lg:text-7xl text-yellow font-bold relative -left-20 mt-5">
+						<h1 className="text-3xl md:text-5xl lg:text-7xl text-yellow font-bold relative md:-left-10 lg:-left-20 mt-5">
 							Workflow
 						</h1>
 						<motion.img
@@ -69,7 +69,7 @@ const Workflow = () => {
 					</div>
 				</div>
 			</div>
-			<div className="w-[50%]">
+			<div className="w-[50%] mb-36">
 				{cards.map((card) => {
 					return <Card card={card} key={card.id} />;
 				})}
@@ -93,7 +93,7 @@ const Card = ({ card }) => {
 			className="sticky top-36 h-[70vh]"
 		>
 			<motion.div className="h-[380px] relative" style={{ scale }}>
-				<div className=" h-full bg-bnw-gradient md:w-80 lg:w-[510px] px-8 md:px-6 lg:px-8 py-20 rounded-2xl space-y-5">
+				<div className="h-full bg-bnw-gradient w-96 md:w-80 lg:w-[510px] px-8 md:px-6 lg:px-8 py-20 rounded-2xl space-y-5 relative top-20 md:top-0">
 					<img
 						src={card.url}
 						alt=""

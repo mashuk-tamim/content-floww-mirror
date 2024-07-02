@@ -84,11 +84,7 @@ const ClientResults = () => {
 						style={{ left: smoothMouse.x, top: smoothMouse.y }}
 					>
 						<div>
-							<img
-								src={parmita}
-								alt=""
-								className="w-56 rounded-lg"
-							/>
+							<img src={parmita} alt="" className="w-56 rounded-lg" />
 						</div>
 						<div className="flex flex-col items-center justify-center h-10">
 							<h2 className="text-black font-medium text-center">
@@ -99,7 +95,7 @@ const ClientResults = () => {
 				</motion.div>
 				{/* Julian Dorey */}
 				<motion.div
-					className="flex justify-between items-center border-b border-black relative wrap"
+					className="flex justify-between items-center border-b border-black wrap relative"
 					onMouseMove={handleMouseMove2}
 				>
 					<p className="text-2xl md:text-3xl lg:text-4xl text-black md:font-medium lg:font-semibold w-full py-6 lg:py-10">
@@ -114,11 +110,7 @@ const ClientResults = () => {
 						style={{ left: smoothMouse.x, top: smoothMouse.y }}
 					>
 						<div>
-							<img
-								src={julian}
-								alt=""
-								className="w-56 rounded-lg"
-							/>
+							<img src={julian} alt="" className="w-56 rounded-lg" />
 						</div>
 						<div className="flex flex-col items-center justify-center h-10">
 							<h2 className="text-black font-medium text-center">

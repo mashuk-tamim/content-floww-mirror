@@ -26,7 +26,7 @@ const Videos = () => {
 	return (
 		<section
 			ref={svgRef}
-			className="w-11/12 mx-auto my-28 py-28 font-poppins"
+			className="w-11/12 mx-auto my-10 md:my-28 pt-10 md:py-28 font-poppins"
 			id="videos"
 		>
 			<div className="w-full mx-auto relative">
@@ -49,7 +49,7 @@ const Videos = () => {
 								className="w-10 absolute top-16"
 							/>
 						</div>
-						<div className="md:ml-24 lg:ml-52">
+						<div className="ml-16 md:ml-24 lg:ml-52">
 							<p>Videos</p>
 						</div>
 						<div className="flex gap-28">
@@ -68,14 +68,14 @@ const Videos = () => {
 								}}
 								src={starFilled}
 								alt=""
-								className="w-14 absolute top-12 md:-right-36 lg:-right-24"
+								className="hidden md:flex w-14 absolute top-12 md:-right-36 lg:-right-24"
 							/>
 						</div>
 					</div>
-					<p className="text-yellow md:text-6xl lg:text-7xl font-bold ml-24 w-full">
+					<p className="text-yellow md:text-6xl lg:text-7xl font-bold ml-12 md:ml-24 w-full">
 						that makes
 					</p>
-					<p className="text-white md:text-4xl lg:text-6xl font-semibold -ml-28 relative">
+					<p className="text-white md:text-4xl lg:text-6xl font-semibold -ml-12 md:-ml-28 relative">
 						your brand spread
 						<span>
 							<motion.img
@@ -86,7 +86,7 @@ const Videos = () => {
 								}}
 								src={starNoFilled}
 								alt=""
-								className="w-8 absolute md:right-0 lg:right-10"
+								className="hidden md:flex w-8 absolute md:right-0 lg:right-10"
 							/>
 						</span>
 					</p>
@@ -95,8 +95,7 @@ const Videos = () => {
 					</p>
 					<div className="w-full text-center md:pt-10 lg:pt-10">
 						<p className="text-white font-medium text-lg">
-							We bring you consistent followers and turn them into
-							raving fans!
+							We bring you consistent followers and turn them into raving fans!
 						</p>
 					</div>
 				</div>

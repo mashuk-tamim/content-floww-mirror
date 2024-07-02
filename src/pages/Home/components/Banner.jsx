@@ -62,7 +62,7 @@ const Banner = () => {
 				<motion.img
 					src={heroArrow}
 					alt=""
-					className="relative md:w-20 lg:w-36 md:-top-32 lg:-top-56 md:left-[650px] lg:left-[1050px]"
+					className="relative w-8 md:w-20 lg:w-36 -top-12 md:-top-32 lg:-top-56 left-[350px] md:left-[650px] lg:left-[1050px]"
 					initial={{ opacity: 0, y: 100 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{

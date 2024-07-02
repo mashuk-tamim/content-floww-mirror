@@ -42,7 +42,7 @@ const Steps = () => {
 						3-step process
 					</h2>
 				</div>
-				<div className="flex gap-3 md:gap-5 absolute top-12 md:top-20 lg:top-28 md:left-0 lg:left-32">
+				<div className="flex gap-3 absolute top-12 md:top-20 lg:top-28 md:left-0 lg:left-32">
 					<h2 className="text-2xl md:text-4xl lg:text-6xl font-semibold text-white">
 						to make your brand
 					</h2>
